@@ -12,30 +12,28 @@ const Footer = () => {
           <p>
             Federal Ministry of Industry, Trade & InvestmentCommercial Law Department
           </p>
+          <p className='mt-5'>Block D, Old secretariat, Area 1, Garki, Abuja, Nigeria</p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-28">
           <div className="flex flex-col gap-2">
-            <p className="font-semibold">Work</p>
-            <p>Buy Today</p>
-            <p>Get Quotation</p>
-            <p>Consultation</p>
-            <p>Installation</p>
+            <p className="font-semibold">Trademark Registry</p>
+            <p>trademark@iponigeria.com</p>
+            <p>080 3435 1514</p>
+            <p className='font-semibold mt-5'>Patent and Design Registry</p>
+            <p>patent.design@iponigeria.com</p>
+            <p>091 6357 0744</p>
           </div>
           <div className="flex flex-col gap-2">
-            <p className="font-semibold">Company</p>
+            <p className="font-semibold">Quick Links</p>
             <Link href="/" className='cursor-pointer'><p>Home</p></Link>
-            <Link href="/about" className='cursor-pointer'><p>About</p></Link>
-            <Link href="/technology" className='cursor-pointer'><p>Technology</p></Link>
-            <Link href="/contact" className='cursor-pointer'><p>Contact</p></Link>
+            <Link href="/about" className='cursor-pointer'><p>About Us</p></Link>
+            <Link href="/technology" className='cursor-pointer'><p>Our Services</p></Link>
+            <Link href="/contact" className='cursor-pointer'><p>Resources</p></Link>
+            <Link href="/contact" className='cursor-pointer'><p>Contact Us</p></Link>
             
           </div>
-          <div className="flex flex-col gap-2 ">
-            <p className="font-semibold">Socials</p>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Tiktok</p>
-          </div>
+          
         </div>
       </div>
     </section>

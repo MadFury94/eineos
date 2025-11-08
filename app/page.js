@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { AiOutlineTrademark } from "react-icons/ai";
 import PrimaryButton from "./components/PrimaryButton";
+import { SiInteractiondesignfoundation } from "react-icons/si";
+import { MdDesignServices } from "react-icons/md";
 import SecondaryButton from "./components/SecondaryButton";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
@@ -23,6 +26,22 @@ export default function Home() {
             <SecondaryButton>Learn More</SecondaryButton>
           </div>
         </div>
+        <div className="mt-14">
+          <Carousel />
+        </div>
+      </section>
+
+      <section className="w-5/6 mx-auto my-20">
+        <div className="lg:flex justify-between">
+          <p className="text-3xl text-green-600 text-center lg:text-left font-semibold">The Mandate <span className="text-black block">That Drives Us</span></p>
+          <p className="lg:w-3/6 mt-3 lg:text-right text-center lg:mt-0">
+            We are responsible for the registration and protection of
+            Trademarks, Patents, and Industrial Designs in Nigeria. Through our
+            intellectual property portal, individuals, businesses, and
+            innovators can file new applications, renew registrations, and
+            manage their IP rights from anywhere.
+          </p>
+        </div>
       </section>
 
       <section className="my-20 mx-auto w-5/6">
@@ -40,16 +59,41 @@ export default function Home() {
             <AiOutlineTrademark className="text-6xl mx-auto text-green-700" />
             <p className="text-xl mt-2 font-semibold">TradeMarks</p>
             <p>
-              Secure your brand identity with trademark protection in Nigeria.
               Register a business name, logo, or slogan to prevent unauthorized
-              use and build brand trust in Nigeria. You can also file a
-              Trademark Opposition against any published mark that conflicts
-              with your registered mark.
+              use and build brand trust in Nigeria.
             </p>
-            <PrimaryButton className="mt-5">Get Started</PrimaryButton>
+            <PrimaryButton className="mt-5">File Application</PrimaryButton>
           </div>
-          
+
+          <div className="rounded-2xl text-center bg-green-800 text-white p-7 shadow-xl">
+            <SiInteractiondesignfoundation className="text-6xl mx-auto text-white" />
+            <p className="text-xl mt-2 font-semibold">Patents</p>
+            <p>
+              Protect your inventions with a patent giving you exclusive rights
+              to your innovations in Nigeria.
+            </p>
+            <SecondaryButton className="mt-5">Register Now</SecondaryButton>
+          </div>
+
+          <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
+            <MdDesignServices className="text-6xl mx-auto text-green-700" />
+            <p className="text-xl mt-2 font-semibold">Industrial Designs</p>
+            <p>
+              Protect your product’s unique look with industrial design
+              registration in Nigeria.
+            </p>
+            <PrimaryButton className="mt-5">Register Now</PrimaryButton>
+          </div>
         </div>
+      </section>
+
+      <section className="my-20 mx-auto w-5/6">
+        <p className="text-green-700 text-center text-2xl font-bold">
+          Register and Get{" "}
+          <span className="text-black block">Approved in Record Time</span>
+        </p>
+
+        <div></div>
       </section>
     </main>
   );
