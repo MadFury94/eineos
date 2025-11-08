@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { AiOutlineTrademark } from "react-icons/ai";
 import PrimaryButton from "./components/PrimaryButton";
@@ -5,8 +6,43 @@ import { SiInteractiondesignfoundation } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 import SecondaryButton from "./components/SecondaryButton";
 import Carousel from "./components/Carousel";
+import ServicesHorizontalScroll from "./components/ServicesHorizontalScroll";
 
 export default function Home() {
+  const services = [
+  {
+    id: 1,
+    image: "/services1.jpg",
+    alt: "Availability Search",
+    title: "Availability Search",
+    description: "Check if your Mark, Title, or Idea is available. Search existing Trademarks, Patents, or Designs before filing.",
+    buttonText: "Search Now"
+  },
+  {
+    id: 2,
+    image: "/services2.jpg",
+    alt: "Publication Journal",
+    title: "Publication Journal",
+    description: "Stay updated on published applications.  Browse our official journal to view recently accepted Trademarks, Patents, and Designs.",
+    buttonText: "Register Now"
+  },
+  {
+    id: 3,
+    image: "/services3.jpg",
+    alt: "Trademark Registration",
+    title: "Trademark Registration",
+    description: "Protect your brand identity.  Register your trademark online to secure exclusive rights to your brand name, logo, or  slogan.",
+    buttonText: "Register Now"
+  },
+  {
+    id: 4,
+    image: "/services4.jpg",
+    alt: "Trademark Opposition",
+    title: "Trademark Opposition",
+    description: "Dispute conflicting trademark applications.  File an opposition against any published trademark that conflicts with your rights or interests  before it is registered.",
+    buttonText: "File Now"
+  }
+];
   return (
     <main>
       <section className="w-5/6 mx-auto my-14 ">
@@ -93,7 +129,9 @@ export default function Home() {
           <span className="text-black block">Approved in Record Time</span>
         </p>
 
-        <div></div>
+        <div className="mt-10">
+          <ServicesHorizontalScroll services={services} />
+        </div>
       </section>
     </main>
   );
