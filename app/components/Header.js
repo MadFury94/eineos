@@ -128,7 +128,7 @@ const Header = () => {
                     <GrProjects /> About Us
                   </p>
                 </Link>
-                <Link href="about">
+                <Link href="services">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}

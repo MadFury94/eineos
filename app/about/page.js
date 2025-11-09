@@ -147,7 +147,7 @@ const page = () => {
               alt="About Us"
               width={600}
               height={400}
-              className="rounded-3xl shadow-lg"
+              className="rounded-3xl shadow-lg "
             />
           </div>
         </div>
