@@ -55,8 +55,6 @@ const page = () => {
               height={400}
               className="rounded-3xl shadow-lg"
             />
-
-      
           </div>
           <div>
             <p className="text-2xl font-semibold">Trademark Registry</p>
@@ -100,7 +98,7 @@ const page = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 mt-32 gap-20">
-          <div>
+          <div className="w-fit">
             <p className="text-2xl font-semibold">Patent & Design Registry</p>
             <p className="my-2">
               The Patent and Design Registry, under the Commercial Law
@@ -131,11 +129,14 @@ const page = () => {
               </p>
               <p className="flex gap-2 items-center">
                 <BiBadgeCheck />
-                Recordal of assignments, licenses, and other post registration services.
+                Recordal of assignments, licenses, and other post registration
+                services.
               </p>
             </div>
             <p>
-              The Registry plays a key role in fostering innovation and protecting the intellectual property  rights of inventors, creatives, startups, and businesses across Nigeria.
+              The Registry plays a key role in fostering innovation and
+              protecting the intellectual property rights of inventors,
+              creatives, startups, and businesses across Nigeria.
             </p>
           </div>
 
@@ -148,15 +149,13 @@ const page = () => {
               height={400}
               className="rounded-3xl shadow-lg"
             />
-
-            
           </div>
         </div>
       </section>
 
       <section className="w-5/6 mx-auto my-20">
         {/* meet our team */}
-        <TeamSection/>
+        <TeamSection />
       </section>
     </main>
   );
