@@ -7,45 +7,50 @@ import { MdDesignServices } from "react-icons/md";
 import SecondaryButton from "./components/SecondaryButton";
 import Carousel from "./components/Carousel";
 import ServicesHorizontalScroll from "./components/ServicesHorizontalScroll";
+import Typewriter from "./components/Typewriter";
 
 export default function Home() {
   const services = [
-  {
-    id: 1,
-    image: "/services1.jpg",
-    alt: "Availability Search",
-    title: "Availability Search",
-    description: "Check if your Mark, Title, or Idea is available. Search existing Trademarks, Patents, or Designs before filing.",
-    buttonText: "Search Now"
-  },
-  {
-    id: 2,
-    image: "/services2.jpg",
-    alt: "Publication Journal",
-    title: "Publication Journal",
-    description: "Stay updated on published applications.  Browse our official journal to view recently accepted Trademarks, Patents, and Designs.",
-    buttonText: "Register Now"
-  },
-  {
-    id: 3,
-    image: "/services3.jpg",
-    alt: "Trademark Registration",
-    title: "Trademark Registration",
-    description: "Protect your brand identity.  Register your trademark online to secure exclusive rights to your brand name, logo, or  slogan.",
-    buttonText: "Register Now"
-  },
-  {
-    id: 4,
-    image: "/services4.jpg",
-    alt: "Trademark Opposition",
-    title: "Trademark Opposition",
-    description: "Dispute conflicting trademark applications.  File an opposition against any published trademark that conflicts with your rights or interests  before it is registered.",
-    buttonText: "File Now"
-  }
-];
+    {
+      id: 1,
+      image: "/services1.jpg",
+      alt: "Availability Search",
+      title: "Availability Search",
+      description:
+        "Check if your Mark, Title, or Idea is available. Search existing Trademarks, Patents, or Designs before filing.",
+      buttonText: "Search Now",
+    },
+    {
+      id: 2,
+      image: "/services2.jpg",
+      alt: "Publication Journal",
+      title: "Publication Journal",
+      description:
+        "Stay updated on published applications.  Browse our official journal to view recently accepted Trademarks, Patents, and Designs.",
+      buttonText: "Register Now",
+    },
+    {
+      id: 3,
+      image: "/services3.jpg",
+      alt: "Trademark Registration",
+      title: "Trademark Registration",
+      description:
+        "Protect your brand identity.  Register your trademark online to secure exclusive rights to your brand name, logo, or  slogan.",
+      buttonText: "Register Now",
+    },
+    {
+      id: 4,
+      image: "/services4.jpg",
+      alt: "Trademark Opposition",
+      title: "Trademark Opposition",
+      description:
+        "Dispute conflicting trademark applications.  File an opposition against any published trademark that conflicts with your rights or interests  before it is registered.",
+      buttonText: "File Now",
+    },
+  ];
   return (
     <main>
-      <section className="w-5/6 mx-auto mt-24 lg:mt-40 ">
+      <section className="w-5/6 mx-auto my-14 ">
         <div>
           <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
             Protect Your Ideas{" "}
@@ -62,23 +67,26 @@ export default function Home() {
             <SecondaryButton>Learn More</SecondaryButton>
           </div>
         </div>
-        <div className="mt-14 relative">
+        <div className="mt-14">
           <Carousel />
-          <div>
-            <Image
-              src="/coa.png"
-              alt="IPO Nigeria Portal"
-              width={50}
-              height={50}
-              className="mx-auto absolute bottom-5 right-5"
-            />
-          </div>
         </div>
       </section>
 
       <section className="w-5/6 mx-auto my-20">
         <div className="lg:flex justify-between">
-          <p className="text-2xl lg:text-3xl text-green-700 text-center lg:text-left font-semibold">The Mandate <span className="text-black block">That Drives Us</span></p>
+          <div className="text-center lg:text-left">
+            <p className="lg:text-5xl text-3xl text-green-600 font-semibold mb-2">
+              The Mandate
+            </p>
+            <Typewriter
+              text={[
+                "To protect intellectual property rights in Nigeria",
+                "To promote innovation, creativity, and fair competition",
+                "To empower businesses.",
+              ]}
+              className="text-2xl lg:text-2xl font-semibold text-black"
+            />
+          </div>
           <p className="lg:w-3/6 mt-3 lg:text-right text-center lg:mt-0">
             We are responsible for the registration and protection of
             Trademarks, Patents, and Industrial Designs in Nigeria. Through our
@@ -95,7 +103,7 @@ export default function Home() {
             Our Services
           </p>
         </div>
-        <p className="text-2xl font-semibold mt-1 text-center">
+        <p className="text-2xl lg:text-5xl font-semibold mt-1 text-center">
           Explore the IPO Nigeria Portal
         </p>
         <div className="mt-10 grid lg:grid-cols-3 gap-5 grid-cols-1">
@@ -133,12 +141,13 @@ export default function Home() {
       </section>
 
       <section className="my-20 mx-auto w-5/6">
-        <p className="text-green-700 text-center text-2xl font-bold">
+        <p className="text-green-700 text-center text-3xl lg:text-5xl font-bold">
           Register and Get{" "}
           <span className="text-black block">Approved in Record Time</span>
         </p>
 
         <div className="mt-10">
+          {/* <ItemSlider services={services} /> */}
           <ServicesHorizontalScroll services={services} />
         </div>
       </section>
