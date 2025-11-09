@@ -5,6 +5,7 @@ import React from "react";
 import { BiBadgeCheck } from "react-icons/bi";
 import aboutHero2 from "../../public/aboutHero2.jpg";
 import PrimaryButton from "../components/PrimaryButton";
+import TeamSection from "../components/TeamSection";
 
 const page = () => {
   return (
@@ -18,11 +19,11 @@ const page = () => {
         <Image
           src={aboutHero2}
           alt="carousel image"
-          className="w-screen object-cover transition-all h-screen duration-700"
+          className="w-screen object-cover h-[70vh] lg:h-[87.5vh] transition-all duration-700"
         />
         {/* Purple overlay for darkening the image */}
         <div
-          className="absolute top-0 left-0 w-full h-full  bg-black/40 z-10 pointer-events-none"
+          className="absolute top-0 left-0 w-full h-[70vh] lg:h-[87.5vh]  bg-black/40 z-10 pointer-events-none"
           style={{ mixBlendMode: "multiply" }}
         ></div>
         <div
@@ -45,7 +46,7 @@ const page = () => {
 
       <section className="w-5/6 mx-auto my-20">
         <div className="grid lg:grid-cols-2 gap-20">
-          <div className="relative">
+          <div className="">
             {/* Background/Base Image */}
             <Image
               src="/about2.jpg"
@@ -55,14 +56,7 @@ const page = () => {
               className="rounded-3xl shadow-lg"
             />
 
-            {/* Overlay Image - positioned on top */}
-            <Image
-              src="/servicesExtra.jpg"
-              width={300}
-              height={300}
-              alt="Service Extra"
-              className="absolute -left-7 top-14 lg:-left-14 rounded-2xl shadow-2xl shadow-white z-10 border-4 border-white"
-            />
+      
           </div>
           <div>
             <p className="text-2xl font-semibold">Trademark Registry</p>
@@ -145,7 +139,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="">
             {/* Background/Base Image */}
             <Image
               src="/about4.jpg"
@@ -155,20 +149,14 @@ const page = () => {
               className="rounded-3xl shadow-lg"
             />
 
-            {/* Overlay Image - positioned on top */}
-            <Image
-              src="/aboutExtra2.jpg"
-              width={300}
-              height={300}
-              alt="Service Extra"
-              className="absolute -left-7 top-14 lg:-left-14 rounded-2xl shadow-2xl shadow-white z-10 border-4 border-white"
-            />
+            
           </div>
         </div>
       </section>
 
       <section className="w-5/6 mx-auto my-20">
-        
+        {/* meet our team */}
+        <TeamSection/>
       </section>
     </main>
   );
