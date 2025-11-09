@@ -26,23 +26,26 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  // Check if we're on the about page to apply white text
+  const isAboutPage = pathname === "/about";
+
   const handleMenu = () => {
     setOpen(!open);
   };
   return (
-    <div className="relative">
+    <div className="absolute top-0 left-0 w-full z-50">
       
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
-        <Link href="/" className="font-bold">
+        <Link href="/" className={`font-bold ${isAboutPage ? 'text-white' : 'text-black'}`}>
           <p>Logo</p>
         </Link>
         <div className="hidden lg:flex gap-10">
           <Link
-            href="/technology"
+            href="/"
             className={
-              pathname === "/technology"
+              pathname === "/"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                : isAboutPage ? "text-white" : "text-black"
             }
           >
             Home
@@ -52,35 +55,35 @@ const Header = () => {
             className={
               pathname === "/about"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                : isAboutPage ? "text-white" : "text-black"
             }
           >
             About Us
           </Link><Link
-            href="/about"
+            href="/services"
             className={
-              pathname === "/about"
+              pathname === "/services"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                : isAboutPage ? "text-white" : "text-black"
             }
           >
             Our Services
           </Link><Link
-            href="/about"
+            href="/resources"
             className={
-              pathname === "/about"
+              pathname === "/resources"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                : isAboutPage ? "text-white" : "text-black"
             }
           >
             Resources
           </Link>
           <Link
-            href="/about"
+            href="/contact"
             className={
-              pathname === "/about"
+              pathname === "/contact"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                : isAboutPage ? "text-white" : "text-black"
             }
           >
             Contact Us
@@ -96,7 +99,7 @@ const Header = () => {
         </div>
 
         <div className="flex lg:hidden" onClick={handleMenu}>
-          <IoMenu className="text-2xl text-green-700 font-light cursor-pointer" />
+          <IoMenu className={`text-2xl font-light cursor-pointer ${isAboutPage ? 'text-white' : 'text-green-700'}`} />
         </div>
         {open && (
           <div className="absolute bg-green-950 text-white top-0 left-0 w-full z-50 h-screen">
@@ -117,7 +120,7 @@ const Header = () => {
                     <TiHomeOutline /> Home
                   </p>
                 </Link>
-                <Link href="technology">
+                <Link href="about">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}

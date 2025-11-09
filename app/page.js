@@ -45,7 +45,7 @@ export default function Home() {
 ];
   return (
     <main>
-      <section className="w-5/6 mx-auto my-14 ">
+      <section className="w-5/6 mx-auto mt-24 lg:mt-40 ">
         <div>
           <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
             Protect Your Ideas{" "}
@@ -62,14 +62,23 @@ export default function Home() {
             <SecondaryButton>Learn More</SecondaryButton>
           </div>
         </div>
-        <div className="mt-14">
+        <div className="mt-14 relative">
           <Carousel />
+          <div>
+            <Image
+              src="/coa.png"
+              alt="IPO Nigeria Portal"
+              width={50}
+              height={50}
+              className="mx-auto absolute bottom-5 right-5"
+            />
+          </div>
         </div>
       </section>
 
       <section className="w-5/6 mx-auto my-20">
         <div className="lg:flex justify-between">
-          <p className="text-3xl text-green-600 text-center lg:text-left font-semibold">The Mandate <span className="text-black block">That Drives Us</span></p>
+          <p className="text-2xl lg:text-3xl text-green-700 text-center lg:text-left font-semibold">The Mandate <span className="text-black block">That Drives Us</span></p>
           <p className="lg:w-3/6 mt-3 lg:text-right text-center lg:mt-0">
             We are responsible for the registration and protection of
             Trademarks, Patents, and Industrial Designs in Nigeria. Through our
