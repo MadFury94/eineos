@@ -16,7 +16,7 @@ const page = () => {
       
       <ReusableHerosection title="Our Services" />
 
-      <section className="mx-auto mt-20 w-5/6">
+      <section className="mx-auto mt-10 w-5/6">
         <div>
           <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
             Comprehensive Intellectual
