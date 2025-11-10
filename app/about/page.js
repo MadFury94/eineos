@@ -9,11 +9,34 @@ import about1 from "../../public/about6.png";
 import about2 from "../../public/about5.png";
 import TeamSection from "../components/TeamSection";
 import ReusableHerosection from "../components/ReusableHerosection";
+import aboutmain from "../../public/aboutmain.png";
 
 const page = () => {
   return (
     <main>
-      <ReusableHerosection title="About Us"/>
+      <ReusableHerosection title="About Us" />
+
+      <section className="bg-[#166534] w-5/6 mx-auto mt-5 text-white rounded-lg">
+        <div className="lg:flex justify-between w-11/12 mx-auto py-10 ">
+          <div>
+            <p className="text-sm mb-1">Protecting Innovation in Nigeria</p>
+            <p className="text-2xl font-semibold lg:w-4/6">
+              Nigeria’s Official Digital Platform for Trademarks, Patents, and
+              Industrial Designs.
+            </p>
+          </div>
+          <p className="lg:text-right lg:w-8/12 mt-4 lg:mt-0">
+            The Intellectual Property Office (IPO) Nigeria, under the Commercial
+            Law Department of the Federal Ministry of Industry, Trade and
+            Investment, helps individuals, businesses, and innovators protect
+            their ideas with ease. Our digital-first system simplifies filing
+            and management of IP rights making it faster and more accessible to
+            secure your brand, invention, or design.
+          </p>
+        </div>
+
+        <Image src={aboutmain} alt="picture depicting property law" className="w-11/12 py-5 lg:py-10 mx-auto"/>
+      </section>
 
       <section className="w-5/6 mx-auto my-20">
         <div className="grid lg:grid-cols-2 gap-20">
@@ -22,7 +45,6 @@ const page = () => {
             <Image
               src={about1}
               alt="About Us"
-              
               className="rounded-3xl shadow-lg"
             />
           </div>

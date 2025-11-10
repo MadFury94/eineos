@@ -46,10 +46,10 @@ const Footer = () => {
               <Link href="/about" className="cursor-pointer">
                 <p>About Us</p>
               </Link>
-              <Link href="/technology" className="cursor-pointer">
+              <Link href="/services" className="cursor-pointer">
                 <p>Our Services</p>
               </Link>
-              <Link href="/contact" className="cursor-pointer">
+              <Link href="/services" className="cursor-pointer">
                 <p>Resources</p>
               </Link>
               <Link href="/contact" className="cursor-pointer">
@@ -67,7 +67,7 @@ const Footer = () => {
             <p className="text-sm">Powered by</p>
             <Image src={poweredby} alt="Logo" className="h-10 w-24" />
           </div>
-          <p>All Rights Reserved</p>
+          <p className="text-right">All Rights Reserved</p>
         </div>
       </div>
     </section>

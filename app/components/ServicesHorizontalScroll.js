@@ -36,8 +36,8 @@ const ServiceCard = ({
       />
       <div className="absolute inset-0 z-20 p-4 flex flex-col justify-end">
         <div className="text-gray-100 w-47/48 mx-auto">
-          <p className="text-2xl font-semibold text-gray-200 mb-2">{title}</p>
-          <p className="text-lg mb-4">{description}</p>
+          <p className="text-xl font-semibold text-gray-200 mb-2">{title}</p>
+          <p className="text-base font-light mb-4">{description}</p>
           <SecondaryButton onClick={onButtonClick}>
             {buttonText}
           </SecondaryButton>

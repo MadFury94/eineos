@@ -99,7 +99,7 @@ export default function Home() {
 
       <section className="my-20 mx-auto w-5/6">
        
-        <p className="text-2xl lg:text-5xl font-semibold mt-1 text-center">
+        <p className="text-2xl lg:text-4xl font-semibold mt-1 text-center">
           Explore the IPO Nigeria Portal
         </p>
         <div className="mt-10 grid lg:grid-cols-3 gap-5 grid-cols-1">
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       <section className="my-20 mx-auto w-5/6">
-        <p className="text-green-700 text-center text-3xl lg:text-5xl font-bold">
+        <p className="text-green-700 text-center text-3xl lg:text-4xl font-bold">
           Register and Get{" "}
           <span className="text-black block">Approved in Record Time</span>
         </p>

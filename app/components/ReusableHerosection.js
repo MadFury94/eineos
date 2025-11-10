@@ -9,14 +9,14 @@ const ReusableHerosection = ({ title = "Page Title" }) => {
         initial={{ opacity: 0, y: -70 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative mb-20"
+        className="relative"
       >
         <Image
           src={aboutHero2}
           alt="Hero background"
           width={1920}
           height={1080}
-          className="object-cover w-11/12 mx-auto transition-all duration-700"
+          className="object-cover w-5/6 mx-auto transition-all duration-700"
         />
         {/* Overlay for darkening the image */}
         <div

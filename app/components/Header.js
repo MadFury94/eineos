@@ -43,8 +43,8 @@ const Header = () => {
             href="/"
             className={
               pathname === "/"
-                ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                ? "text-black font-semibold"
+                : "text-gray-500"
             }
           >
             Home
@@ -53,8 +53,8 @@ const Header = () => {
             href="/about"
             className={
               pathname === "/about"
-                ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                ? "text-black font-semibold"
+                : "text-gray-500"
             }
           >
             About Us
@@ -62,8 +62,8 @@ const Header = () => {
             href="/services"
             className={
               pathname === "/services"
-                ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                ? "text-black font-semibold"
+                : "text-gray-500"
             }
           >
             Our Services
@@ -71,8 +71,8 @@ const Header = () => {
             href="/resources"
             className={
               pathname === "/resources"
-                ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                ? "text-black font-semibold"
+                : "text-gray-500"
             }
           >
             Resources
@@ -81,8 +81,8 @@ const Header = () => {
             href="/contact"
             className={
               pathname === "/contact"
-                ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                ? "text-black font-semibold"
+                : "text-gray-500"
             }
           >
             Contact Us
@@ -92,8 +92,8 @@ const Header = () => {
             href="/faq"
             className={
               pathname === "/faq"
-                ? "border-b-2 border-green-600 px-4 py-1"
-                : "text-black"
+                ? "text-black font-semibold"
+                : "text-gray-500"
             }
           >
             FAQs
