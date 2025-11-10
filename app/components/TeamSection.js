@@ -1,19 +1,7 @@
-"use client";
-import React, { useState } from 'react';
+import React from 'react';
 import TeamMemberCard from './TeamMemberCard';
 
 const TeamSection = ({ teamMembers = [] }) => {
-  const [expandedIndex, setExpandedIndex] = useState(0); // First card expanded by default
-
-  const handleCardHover = (index) => {
-    setExpandedIndex(index);
-  };
-
-  const handleCardLeave = () => {
-    // Keep the last hovered card expanded, or default to first
-    // You can change this behavior if needed
-  };
-
   // Default team data if none provided
   const defaultTeamMembers = [
     {
@@ -59,30 +47,13 @@ const TeamSection = ({ teamMembers = [] }) => {
         </p>
       </div>
       
-      {/* Desktop View - Hover Effect */}
-      <div className="hidden lg:flex gap-4 h-[450px] overflow-hidden">
-        {membersToShow.map((member, index) => (
+      {/* Simple Grid Layout - Works on all devices */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {membersToShow.map((member) => (
           <TeamMemberCard
             key={member.id}
             member={member}
-            isExpanded={expandedIndex === index}
-            onHover={() => handleCardHover(index)}
-            onLeave={handleCardLeave}
           />
-        ))}
-      </div>
-
-      {/* Mobile View - Stacked Cards */}
-      <div className="lg:hidden space-y-6">
-        {membersToShow.map((member) => (
-          <div key={member.id} className="relative h-[400px] rounded-2xl overflow-hidden">
-            <TeamMemberCard
-              member={member}
-              isExpanded={true} // Always expanded on mobile
-              onHover={() => {}}
-              onLeave={() => {}}
-            />
-          </div>
         ))}
       </div>
     </div>

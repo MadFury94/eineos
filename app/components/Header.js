@@ -32,7 +32,7 @@ const Header = () => {
     setOpen(!open);
   };
   return (
-    <div className="absolute top-0 left-0 w-full z-50">
+    <div className="">
       
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
         <Link href="/" className="font-bold">

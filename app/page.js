@@ -50,7 +50,7 @@ export default function Home() {
   ];
   return (
     <main>
-      <section className="w-5/6 mx-auto lg:mt-40 mt-24 ">
+      <section className="w-5/6 mx-auto mt-10 lg:mt-16">
         <div>
           <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
             Protect Your Ideas{" "}

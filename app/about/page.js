@@ -5,54 +5,24 @@ import React from "react";
 import { BiBadgeCheck } from "react-icons/bi";
 import aboutHero2 from "../../public/aboutHero2.jpg";
 import PrimaryButton from "../components/PrimaryButton";
+import about1 from "../../public/about6.png";
+import about2 from "../../public/about5.png";
 import TeamSection from "../components/TeamSection";
+import ReusableHerosection from "../components/ReusableHerosection";
 
 const page = () => {
   return (
     <main>
-      <motion.section
-        initial={{ opacity: 0, y: -70 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative mb-20"
-      >
-        <Image
-          src={aboutHero2}
-          alt="carousel image"
-          className="w-screen object-cover h-[70vh] lg:h-[87.5vh] transition-all duration-700"
-        />
-        {/* Purple overlay for darkening the image */}
-        <div
-          className="absolute top-0 left-0 w-full h-[70vh] lg:h-[87.5vh]  bg-black/40 z-10 pointer-events-none"
-          style={{ mixBlendMode: "multiply" }}
-        ></div>
-        <div
-          className="absolute flex flex-col justify-center 
-              items-center top-0 right-0 left-0 
-              bottom-0 text-white w-5/6 mx-auto text-center z-20"
-        >
-          {/* <p className='border border-sky-700 bg-sky-200 px-2 py-0.5 text-xs rounded-xl text-sky-800'>Advanced Technology</p> */}
-          <p className=" text-4xl mt-2 lg:text-5xl font-bold">About us</p>
-          <p className="mt-1 lg:mt-3 lg:w-5/6 mx-auto lg:text-xl text-base text-center mb-5 lg:mb-10">
-            We help individuals, businesses, and innovators protect their ideas
-            with ease. Our digital-first system simplifies filing and management
-            of IP rights making it faster and more accessible to secure your
-            brand, invention, or design.
-          </p>
-
-          <PrimaryButton>Get Started</PrimaryButton>
-        </div>
-      </motion.section>
+      <ReusableHerosection title="About Us"/>
 
       <section className="w-5/6 mx-auto my-20">
         <div className="grid lg:grid-cols-2 gap-20">
           <div className="">
             {/* Background/Base Image */}
             <Image
-              src="/about2.jpg"
+              src={about1}
               alt="About Us"
-              width={600}
-              height={400}
+              
               className="rounded-3xl shadow-lg"
             />
           </div>
@@ -97,8 +67,8 @@ const page = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 mt-32 gap-20">
-          <div className="w-fit">
+        <div className="grid lg:grid-cols-2 items-center mt-32 gap-20">
+          <div className="">
             <p className="text-2xl font-semibold">Patent & Design Registry</p>
             <p className="my-2">
               The Patent and Design Registry, under the Commercial Law
@@ -143,7 +113,7 @@ const page = () => {
           <div className="">
             {/* Background/Base Image */}
             <Image
-              src="/about4.jpg"
+              src={about2}
               alt="About Us"
               width={600}
               height={400}
