@@ -8,6 +8,8 @@ import {
   MdOutlineTrackChanges,
 } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
+import { MdOutlineLibraryBooks } from "react-icons/md";
+import { FaRegCircleQuestion } from "react-icons/fa6";
 import { TiHomeOutline } from "react-icons/ti";
 import { LuMessageSquareText } from "react-icons/lu";
 import { GrProjects } from "react-icons/gr";
@@ -26,8 +28,8 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // Check if we're on the about page to apply white text
-  const isAboutPage = pathname === "/about";
+  // Check if we're NOT on the home page to apply white text
+  const isNotHomePage = pathname !== "/";
 
   const handleMenu = () => {
     setOpen(!open);
@@ -36,7 +38,7 @@ const Header = () => {
     <div className="absolute top-0 left-0 w-full z-50">
       
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
-        <Link href="/" className={`font-bold ${isAboutPage ? 'text-white' : 'text-black'}`}>
+        <Link href="/" className={`font-bold ${isNotHomePage ? 'text-white' : 'text-black'}`}>
           <p>Logo</p>
         </Link>
         <div className="hidden lg:flex gap-10">
@@ -45,7 +47,7 @@ const Header = () => {
             className={
               pathname === "/"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : isAboutPage ? "text-white" : "text-black"
+                : isNotHomePage ? "text-white" : "text-black"
             }
           >
             Home
@@ -55,7 +57,7 @@ const Header = () => {
             className={
               pathname === "/about"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : isAboutPage ? "text-white" : "text-black"
+                : isNotHomePage ? "text-white" : "text-black"
             }
           >
             About Us
@@ -64,7 +66,7 @@ const Header = () => {
             className={
               pathname === "/services"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : isAboutPage ? "text-white" : "text-black"
+                : isNotHomePage ? "text-white" : "text-black"
             }
           >
             Our Services
@@ -73,7 +75,7 @@ const Header = () => {
             className={
               pathname === "/resources"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : isAboutPage ? "text-white" : "text-black"
+                : isNotHomePage ? "text-white" : "text-black"
             }
           >
             Resources
@@ -83,10 +85,21 @@ const Header = () => {
             className={
               pathname === "/contact"
                 ? "border-b-2 border-green-600 px-4 py-1"
-                : isAboutPage ? "text-white" : "text-black"
+                : isNotHomePage ? "text-white" : "text-black"
             }
           >
             Contact Us
+          </Link>
+
+          <Link
+            href="/faq"
+            className={
+              pathname === "/faq"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : isNotHomePage ? "text-white" : "text-black"
+            }
+          >
+            FAQs
           </Link>
         </div>
 
@@ -99,7 +112,7 @@ const Header = () => {
         </div>
 
         <div className="flex lg:hidden" onClick={handleMenu}>
-          <IoMenu className={`text-2xl font-light cursor-pointer ${isAboutPage ? 'text-white' : 'text-green-700'}`} />
+          <IoMenu className={`text-2xl font-light cursor-pointer ${isNotHomePage ? 'text-white' : 'text-green-700'}`} />
         </div>
         {open && (
           <div className="absolute bg-green-950 text-white top-0 left-0 w-full z-50 h-screen">
@@ -141,7 +154,7 @@ const Header = () => {
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}
                   >
-                    <MdOutlineWorkspaces /> Resources
+                    <MdOutlineLibraryBooks /> Resources
                   </p>
                 </Link>
                 <Link href="contact">
@@ -150,6 +163,14 @@ const Header = () => {
                     onClick={() => setOpen(false)}
                   >
                     <LuMessageSquareText /> Contact Us
+                  </p>
+                </Link>
+                <Link href="contact">
+                  <p
+                    className="flex gap-3 items-center"
+                    onClick={() => setOpen(false)}
+                  >
+                    <FaRegCircleQuestion /> FAQs
                   </p>
                 </Link>
               </div>
