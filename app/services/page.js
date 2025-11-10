@@ -46,25 +46,6 @@ const page = () => {
           <PrimaryButton>Get Started</PrimaryButton>
         </div>
       </motion.section>
-      <section className="w-5/6 mx-auto lg:mt-40 mt-24 ">
-        <div className="my-20 flex flex-wrap mb-5 lg:mb-0 justify-center gap-10 lg:gap-40">
-          <div className="text-center">
-            <p className="font-bold text-5xl">17K+</p>
-            <p className="text-gray-700">Satisfied Clients</p>
-          </div>
-
-          <div className="text-center">
-            <p className=" font-bold text-5xl">250+</p>
-            <p className="text-gray-700">Trusted Partners</p>
-          </div>
-
-          <div className="text-center">
-            <p className="font-bold text-5xl">20yrs</p>
-            <p className="text-gray-700">Core Experience</p>
-          </div>
-        </div>
-        
-      </section>
 
       <section className="mx-auto mt-32 w-5/6">
         <div>

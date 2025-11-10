@@ -28,9 +28,6 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // Check if we're NOT on the home page to apply white text
-  const isNotHomePage = pathname !== "/";
-
   const handleMenu = () => {
     setOpen(!open);
   };
@@ -38,7 +35,7 @@ const Header = () => {
     <div className="absolute top-0 left-0 w-full z-50">
       
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
-        <Link href="/" className={`font-bold ${isNotHomePage ? 'text-white' : 'text-black'}`}>
+        <Link href="/" className="font-bold">
           <p>Logo</p>
         </Link>
         <div className="hidden lg:flex gap-10">
@@ -46,8 +43,8 @@ const Header = () => {
             href="/"
             className={
               pathname === "/"
-                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
-                : isNotHomePage ? "text-white" : "text-black"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : "text-black"
             }
           >
             Home
@@ -56,8 +53,8 @@ const Header = () => {
             href="/about"
             className={
               pathname === "/about"
-                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
-                : isNotHomePage ? "text-white" : "text-black"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : "text-black"
             }
           >
             About Us
@@ -65,8 +62,8 @@ const Header = () => {
             href="/services"
             className={
               pathname === "/services"
-                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
-                : isNotHomePage ? "text-white" : "text-black"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : "text-black"
             }
           >
             Our Services
@@ -74,8 +71,8 @@ const Header = () => {
             href="/resources"
             className={
               pathname === "/resources"
-                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
-                : isNotHomePage ? "text-white" : "text-black"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : "text-black"
             }
           >
             Resources
@@ -84,8 +81,8 @@ const Header = () => {
             href="/contact"
             className={
               pathname === "/contact"
-                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
-                : isNotHomePage ? "text-white" : "text-black"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : "text-black"
             }
           >
             Contact Us
@@ -95,8 +92,8 @@ const Header = () => {
             href="/faq"
             className={
               pathname === "/faq"
-                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
-                : isNotHomePage ? "text-white" : "text-black"
+                ? "border-b-2 border-green-600 px-4 py-1"
+                : "text-black"
             }
           >
             FAQs
@@ -112,7 +109,7 @@ const Header = () => {
         </div>
 
         <div className="flex lg:hidden" onClick={handleMenu}>
-          <IoMenu className={`text-2xl font-light cursor-pointer ${isNotHomePage ? 'text-white' : 'text-green-700'}`} />
+          <IoMenu className="text-2xl text-green-700 font-light cursor-pointer" />
         </div>
         {open && (
           <div className="absolute bg-green-950 text-white top-0 left-0 w-full z-50 h-screen">
