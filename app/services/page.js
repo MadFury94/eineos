@@ -8,10 +8,12 @@ import advice from "../../public/advice.jpg";
 import design from "../../public/design.jpg";
 import { motion } from "framer-motion";
 import servicehero from "../../public/servicehero.jpg";
+import ReusableHerosection from "../components/ReusableHerosection";
 
 const page = () => {
   return (
     <main>
+      
       <motion.section
         initial={{ opacity: 0, y: -70 }}
         animate={{ opacity: 1, y: 0 }}

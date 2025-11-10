@@ -64,7 +64,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center mt-7 gap-3">
             <PrimaryButton>Check Availability</PrimaryButton>
-            <SecondaryButton>Learn More</SecondaryButton>
+            <SecondaryButton>Fill an Application</SecondaryButton>
           </div>
         </div>
         <div className="mt-14">
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="lg:flex justify-between">
           <div className="text-center lg:text-left">
             <p className="lg:text-5xl text-3xl text-green-600 font-semibold mb-2">
-              The Mandate
+              Our Mandate
             </p>
             <Typewriter
               text={[
@@ -98,11 +98,7 @@ export default function Home() {
       </section>
 
       <section className="my-20 mx-auto w-5/6">
-        <div className="flex justify-center">
-          <p className="text-xs bg-green-50 w-fit rounded-xl px-3 py-1.5">
-            Our Services
-          </p>
-        </div>
+       
         <p className="text-2xl lg:text-5xl font-semibold mt-1 text-center">
           Explore the IPO Nigeria Portal
         </p>

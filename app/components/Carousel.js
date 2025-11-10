@@ -19,7 +19,7 @@ const Carousel = () => {
         <Image
           src={images[current]}
           alt="carousel image"
-          className="w-screen lg:h-96 lg:object-cover rounded-3xl transition-all duration-700"
+          className="w-screen lg:h-screen lg:object-cover rounded-lg transition-all duration-700"
         />
     </div>
   )

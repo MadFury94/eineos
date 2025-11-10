@@ -46,7 +46,7 @@ const Header = () => {
             href="/"
             className={
               pathname === "/"
-                ? "border-b-2 border-green-600 px-4 py-1"
+                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
                 : isNotHomePage ? "text-white" : "text-black"
             }
           >
@@ -56,7 +56,7 @@ const Header = () => {
             href="/about"
             className={
               pathname === "/about"
-                ? "border-b-2 border-green-600 px-4 py-1"
+                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
                 : isNotHomePage ? "text-white" : "text-black"
             }
           >
@@ -65,7 +65,7 @@ const Header = () => {
             href="/services"
             className={
               pathname === "/services"
-                ? "border-b-2 border-green-600 px-4 py-1"
+                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
                 : isNotHomePage ? "text-white" : "text-black"
             }
           >
@@ -74,7 +74,7 @@ const Header = () => {
             href="/resources"
             className={
               pathname === "/resources"
-                ? "border-b-2 border-green-600 px-4 py-1"
+                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
                 : isNotHomePage ? "text-white" : "text-black"
             }
           >
@@ -84,7 +84,7 @@ const Header = () => {
             href="/contact"
             className={
               pathname === "/contact"
-                ? "border-b-2 border-green-600 px-4 py-1"
+                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
                 : isNotHomePage ? "text-white" : "text-black"
             }
           >
@@ -95,7 +95,7 @@ const Header = () => {
             href="/faq"
             className={
               pathname === "/faq"
-                ? "border-b-2 border-green-600 px-4 py-1"
+                ? `border-b-2 border-green-600 px-4 py-1 ${isNotHomePage ? 'text-white' : 'text-black'}`
                 : isNotHomePage ? "text-white" : "text-black"
             }
           >
