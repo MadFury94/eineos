@@ -6,13 +6,13 @@ import poweredby from "../../public/Poweredby.png";
 const Footer = () => {
   return (
     <section className="bg-[#166534] text-white py-10">
-      <div className="w-5/6 lg:w-11/12 mx-auto font-light text-sm">
+      <div className="w-5/6 lg:w-11/12 mx-auto font-light ">
         <div className="lg:flex">
           <div>
             <p className="mb-4 text-3xl font-semibold">Contact Us</p>
             <div className="lg:flex gap-10">
               <div className="lg:w-2/6">
-                <p className="font-semibold text-base">
+                <p className="font-semibold text-lg">
                   Federal Ministry of Industry, Trade & Investment Commercial
                   Law Department
                 </p>
@@ -22,13 +22,13 @@ const Footer = () => {
               </div>
 
               <div className="space-y-2 mt-8 lg:mt-0">
-                <p className="font-semibold text-base">Trademark Registry</p>
+                <p className="font-semibold text-lg">Trademark Registry</p>
                 <p>trademark@iponigeria.com</p>
                 <p>080 3435 1514</p>
               </div>
 
               <div className="space-y-2 mt-8 lg:mt-0">
-                <p className="font-semibold text-base">
+                <p className="font-semibold text-lg">
                   Patent and Design Registry
                 </p>
                 <p>patent.design@iponigeria.com</p>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 lg:mt-0">
-            <div className="flex flex-col gap-2">
+            <div className="flex text-lg flex-col gap-2">
               <p className="font-semibold text-2xl">Quick Links</p>
               <Link href="/" className="cursor-pointer">
                 <p>Home</p>
