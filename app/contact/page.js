@@ -14,18 +14,18 @@ const page = () => {
       <section className="bg-gray-100 w-5/6 my-5 py-10 mx-auto">
         <div className="lg:flex justify-between mx-auto w-11/12">
           <div className="">
-            <p>Get in Touch with IPO Nigeria</p>
+            <p className=" mb-5 font-bold text-2xl">Get in Touch with <span className="block text-green-700">IPO Nigeria</span></p>
             <input
-              className="bg-white px-3 py-1 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
+              className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
               type="text"
               id="name"
-              placeholder="Enter your name"
+              placeholder="Select Registry"
               name="name"
               required
             />
             <div className="grid gap-5 grid-cols-2">
               <input
-                className="bg-white px-3 py-1 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
+                className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
                 type="text"
                 id="name"
                 placeholder="First Name"
@@ -33,7 +33,7 @@ const page = () => {
                 required
               />
               <input
-                className="bg-white px-3 py-1 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
+                className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
                 type="text"
                 id="name"
                 placeholder="Last Name"
@@ -44,7 +44,7 @@ const page = () => {
 
             <div className="grid gap-5 grid-cols-2">
               <input
-                className="bg-white px-3 py-1 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
+                className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
                 type="text"
                 id="name"
                 placeholder="Email Address"
@@ -52,7 +52,7 @@ const page = () => {
                 required
               />
               <input
-                className="bg-white px-3 py-1 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
+                className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
                 type="text"
                 id="name"
                 placeholder="Phone Number"
@@ -60,12 +60,41 @@ const page = () => {
                 required
               />
             </div>
+            <input
+                className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
+                type="text"
+                id="name"
+                placeholder="Subject"
+                name="subject"
+                required
+              />
+              <textarea
+              className="w-full px-3 py-2  bg-white mt-2 lg:mt-5 rounded-md placeholder:text-gray-400 outline-none"
+              cols="20"
+              rows="6"
+              name="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <PrimaryButton className="mt-5">Submit</PrimaryButton>
           </div>
 
-          <div className="bg-[#166534] w- rounded-2xl text-white">
-            <div className="w-11/12 mx-auto py-10">
-              <p className="text-lg font-semibold">Address</p>
+          <div className="bg-[#166534] mt-10 lg:mt-0 rounded-2xl text-white">
+            <div className="w-5/6 mx-auto py-10">
+              <p className="text-xl font-semibold">Address</p>
               <p>Block D, Old secretariat, Area 1, Garki, Abuja, Nigeria</p>
+
+              <p className="text-xl font-semibold mt-10">Contact</p>
+              <p className="font-semibold mt-1">Trademark Registry</p>
+              <p className="">trademark@iponigeria.com</p>
+              <p>08034351514</p>
+
+              <p className="font-semibold mt-4">Patent and Design Registry</p>
+              <p>patent.design@iponigeria.com</p>
+              <p>09163570744</p>
+
+              <p className="text-xl font-semibold mt-10">Open time</p>
+              <p>Monday - Friday: 9:00am - 5:00pm</p>
             </div>
           </div>
         </div>

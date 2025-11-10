@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-10 lg:mt-0">
+          <div className="mt-10 lg:mt-0 lg:w-1/6">
             <div className="flex text-lg flex-col gap-2">
               <p className="font-semibold text-2xl">Quick Links</p>
               <Link href="/" className="cursor-pointer">
