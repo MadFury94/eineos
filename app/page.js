@@ -121,7 +121,7 @@ export default function Home() {
               Protect your inventions with a patent giving you exclusive rights
               to your innovations in Nigeria.
             </p>
-            <SecondaryButton className="mt-5">Register Now</SecondaryButton>
+            <SecondaryButton className="mt-5">File Application</SecondaryButton>
           </div>
 
           <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
@@ -131,7 +131,7 @@ export default function Home() {
               Protect your product’s unique look with industrial design
               registration in Nigeria.
             </p>
-            <PrimaryButton className="mt-5">Register Now</PrimaryButton>
+            <PrimaryButton className="mt-5">File Application</PrimaryButton>
           </div>
         </div>
       </section>
