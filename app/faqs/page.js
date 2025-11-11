@@ -13,10 +13,10 @@ const page = () => {
   const faqData = [
     {
       category: "TRADEMARK",
-      subtitle: "Understanding Trademarks in Nigeria",
+      subtitle: "",
       sections: [
         {
-          sectionTitle: "",
+          sectionTitle: "Understanding Trademarks in Nigeria",
           questions: [
             {
               question: "What is a trademark?",
@@ -138,15 +138,23 @@ const page = () => {
               answer: "Yes, foreign individuals and companies can register trademarks in Nigeria. However, they must have an address for service in Nigeria or appoint a local agent/attorney to represent them. Foreign applicants can also claim priority based on earlier applications filed in other countries within 6 months of the first filing, provided there's a reciprocal arrangement or both countries are party to the Paris Convention."
             }
           ]
+        },
+        {
+          sectionTitle: "Trademark Classes in Nigeria",
+          isTextOnly: true,
+          content: {
+            text: "Trademarks in Nigeria are categorized into 45 classes (1-34 for goods and 35-45 for services). You can view the full classification on our website or download the Trademark Class Guide (PDF) for detailed descriptions.",
+            link: "List of Trademarks.docx"
+          }
         }
       ]
     },
     {
       category: "PATENT",
-      subtitle: "Understanding Patent in Nigeria",
+      subtitle: "",
       sections: [
         {
-          sectionTitle: "",
+          sectionTitle: "Understanding Patent in Nigeria",
           questions: [
             {
               question: "What is a Patent?",
@@ -179,10 +187,10 @@ const page = () => {
     },
     {
       category: "DESIGN",
-      subtitle: "Understanding Industrial Designs",
+      subtitle: "",
       sections: [
         {
-          sectionTitle: "",
+          sectionTitle: "Understanding Industrial Designs",
           questions: [
             {
               question: "What is a design?",
@@ -264,7 +272,7 @@ const page = () => {
           <div key={sectionIndex} className="mb-12 bg-gray-100 p-8 rounded-lg">
             {/* Main Section Header */}
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 {section.category}
               </h2>
               {section.subtitle && (
@@ -292,43 +300,53 @@ const page = () => {
                     </h3>
                   )}
                   
-                  <div className="space-y-4">
-                    {subsection.questions.map((faq, faqIndex) => {
-                      const globalIndex = `${sectionIndex}-${subsectionIndex}-${faqIndex}`;
-                      const isOpen = openFAQ === globalIndex;
-                      
-                      return (
-                        <div
-                          key={faqIndex}
-                          className="bg-white rounded-lg shadow-sm border border-gray-200"
-                        >
-                          {/* Question */}
-                          <button
-                            onClick={() => toggleFAQ(globalIndex)}
-                            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  {/* Check if subsection is text-only */}
+                  {subsection.isTextOnly ? (
+                    <div className="bg-white rounded-lg p-6 border border-gray-200">
+                      <p className="text-gray-700 mb-3">{subsection.content.text}</p>
+                      <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">
+                        {subsection.content.link}
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      {subsection.questions.map((faq, faqIndex) => {
+                        const globalIndex = `${sectionIndex}-${subsectionIndex}-${faqIndex}`;
+                        const isOpen = openFAQ === globalIndex;
+                        
+                        return (
+                          <div
+                            key={faqIndex}
+                            className="bg-white rounded-lg shadow-sm border border-gray-200"
                           >
-                            <span className="text-gray-700 font-medium">
-                              {faq.question}
-                            </span>
-                            <MdKeyboardArrowDown
-                              className={`text-gray-500 text-xl transition-transform duration-200 ${
-                                isOpen ? "rotate-180" : ""
-                              }`}
-                            />
-                          </button>
+                            {/* Question */}
+                            <button
+                              onClick={() => toggleFAQ(globalIndex)}
+                              className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                            >
+                              <span className="text-gray-700 font-medium">
+                                {faq.question}
+                              </span>
+                              <MdKeyboardArrowDown
+                                className={`text-gray-500 text-xl transition-transform duration-200 ${
+                                  isOpen ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
 
-                          {/* Answer */}
-                          {isOpen && (
-                            <div className="px-6 pb-4">
-                              <p className="text-gray-600 leading-relaxed">
-                                {faq.answer}
-                              </p>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
+                            {/* Answer */}
+                            {isOpen && (
+                              <div className="px-6 pb-4">
+                                <p className="text-gray-600 leading-relaxed">
+                                  {faq.answer}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               ))
             )}
