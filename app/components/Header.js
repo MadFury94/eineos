@@ -36,7 +36,14 @@ const Header = () => {
       
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
         <Link href="/" className="font-bold">
-          <p>Logo</p>
+          <div>
+            <Image
+              src="/coa.png"
+              alt="Eineos Logo"
+              width={30}
+              height={10}
+            />
+          </div>
         </Link>
         <div className="hidden lg:flex gap-10">
           <Link
@@ -101,18 +108,16 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:flex gap-8">
-          <Link href="/contact">
           <PrimaryButton>
-              Login
-            </PrimaryButton>
-          </Link>
+            Login
+          </PrimaryButton>
         </div>
 
         <div className="flex lg:hidden" onClick={handleMenu}>
           <IoMenu className="text-2xl text-green-700 font-light cursor-pointer" />
         </div>
         {open && (
-          <div className="absolute bg-green-950 text-white top-0 left-0 w-full z-50 h-screen">
+          <div className="absolute bg-[#166534] text-white top-0 left-0 w-full z-50 h-screen">
             <div className="w-10/12 py-8 mx-auto">
               <div
                 onClick={handleMenu}
@@ -130,7 +135,7 @@ const Header = () => {
                     <TiHomeOutline /> Home
                   </p>
                 </Link>
-                <Link href="about">
+                <Link href="/about">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}
@@ -138,7 +143,7 @@ const Header = () => {
                     <GrProjects /> About Us
                   </p>
                 </Link>
-                <Link href="services">
+                <Link href="/services">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}
@@ -146,7 +151,7 @@ const Header = () => {
                     <MdOutlineWorkspaces /> Our Services
                   </p>
                 </Link>
-                <Link href="about">
+                <Link href="/resources">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}
@@ -154,7 +159,7 @@ const Header = () => {
                     <MdOutlineLibraryBooks /> Resources
                   </p>
                 </Link>
-                <Link href="contact">
+                <Link href="/contact">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}
@@ -162,7 +167,7 @@ const Header = () => {
                     <LuMessageSquareText /> Contact Us
                   </p>
                 </Link>
-                <Link href="contact">
+                <Link href="/faqs">
                   <p
                     className="flex gap-3 items-center"
                     onClick={() => setOpen(false)}
@@ -173,21 +178,7 @@ const Header = () => {
               </div>
 
               <div className="flex justify-center text-2xl gap-7 mt-24">
-                <Link target="_blank" href="">
-                  <BsInstagram className="cursor-pointer" />
-                </Link>
-                <Link target="_blank" href="">
-                  <BsTwitter className="cursor-pointer" />
-                </Link>
-                <Link target="_blank" href="">
-                  <BsFacebook className="cursor-pointer" />
-                </Link>
-                <Link target="_blank" href="">
-                  <BsLinkedin className="cursor-pointer" />
-                </Link>
-                <Link target="_blank" href="">
-                  <BsWhatsapp />
-                </Link>
+                
               </div>
             </div>
           </div>
