@@ -27,7 +27,7 @@ const page = () => {
                 Industrial Designs.
               </p>
             </div>
-            <p className="lg:text-right lg:w-8/12 mt-4 lg:mt-0">
+            <p className="lg:text-left lg:w-8/12 mt-4 lg:mt-0">
               The Intellectual Property Office (IPO) Nigeria, under the Commercial
               Law Department of the Federal Ministry of Industry, Trade and
               Investment, helps individuals, businesses, and innovators protect

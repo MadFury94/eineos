@@ -128,7 +128,7 @@ const page = () => {
               <p>Filing Eligibility requirements overview.</p>
               <p>Application readiness support.</p>
             </div>
-            <PrimaryButton className="mt-6">Request Advice</PrimaryButton>
+            <PrimaryButton className="mt-6" href="/contact">Request Advice</PrimaryButton>
           </div>
         </div>
 
@@ -160,7 +160,7 @@ const page = () => {
                 Address.)
               </p>
             </div>
-            <PrimaryButton className="mt-6">Request Advice</PrimaryButton>
+            <PrimaryButton className="mt-6">Get Started</PrimaryButton>
           </div>
         </div>
       </section>

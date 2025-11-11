@@ -40,11 +40,9 @@ const TeamSection = ({ teamMembers = [] }) => {
     <div className="w-full">
       <div className="mb-10">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
-          Meet Our Team Members
+          Leadership & Management
         </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto">
-          Our dedicated team of legal experts and IP specialists are here to help protect your intellectual property and guide you through the registration process.
-        </p>
+        
       </div>
       
       {/* Simple Grid Layout - Works on all devices */}
