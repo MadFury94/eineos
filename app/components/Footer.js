@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import poweredby from "../../public/Poweredby.png";
+import { IoLocationOutline } from "react-icons/io5";
+import { IoCallOutline } from "react-icons/io5";
+import { MdMailOutline } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -16,23 +19,45 @@ const Footer = () => {
                   Federal Ministry of Industry, Trade & Investment Commercial
                   Law Department
                 </p>
-                <p className="mt-5">
-                  Block D, Old secretariat, Area 1, Garki, Abuja, Nigeria
-                </p>
+                <div className="mt-5 flex items-start gap-2">
+                  <div className="flex justify-center items-center h-10 w-10 bg-white rounded-full flex-shrink-0">
+                    <IoLocationOutline className="h-5 w-5 text-green-700" />
+                  </div>
+                  <p>Block D, Old secretariat, Area 1, Garki, Abuja, Nigeria</p>
+                </div>
               </div>
 
               <div className="space-y-2 mt-8 lg:mt-0">
                 <p className="font-semibold text-lg">Trademark Registry</p>
-                <p>trademark@iponigeria.com</p>
-                <p>080 3435 1514</p>
+                <div className="flex gap-1 items-center">
+                  <div className="flex justify-center items-center h-4 w-4 bg-white rounded-full">
+                    <MdMailOutline className="h-2 w-2 text-green-700" />
+                  </div>
+                  trademark@iponigeria.com
+                </div>
+                <div className="flex gap-1 items-center">
+                  <div className="flex justify-center items-center h-4 w-4 bg-white rounded-full">
+                    <IoCallOutline className="h-2 w-2 text-green-700" />
+                  </div>
+                  080 3435 1514
+                </div>
               </div>
 
               <div className="space-y-2 mt-8 lg:mt-0">
                 <p className="font-semibold text-lg">
                   Patent and Design Registry
                 </p>
-                <p>patent.design@iponigeria.com</p>
-                <p>091 6357 0744</p>
+                <div className="flex gap-1 items-center">
+                  <div className="flex justify-center items-center h-4 w-4 bg-white rounded-full">
+                    <MdMailOutline className="h-2 w-2 text-green-700" />
+                  </div>
+                  patent.design@iponigeria.com
+                </div>
+                <div className="flex gap-1 items-center">
+                  <div className="flex justify-center items-center h-4 w-4 bg-white rounded-full">
+                    <IoCallOutline className="h-2 w-2 text-green-700" />
+                  </div>
+                  091 6357 0744</div>
               </div>
             </div>
           </div>

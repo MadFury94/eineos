@@ -3,12 +3,14 @@ import Image from "next/image";
 import { AiOutlineTrademark } from "react-icons/ai";
 import PrimaryButton from "./components/PrimaryButton";
 import { SiInteractiondesignfoundation } from "react-icons/si";
+import { PiTrademark } from "react-icons/pi";
 import { MdDesignServices } from "react-icons/md";
 import SecondaryButton from "./components/SecondaryButton";
 import Carousel from "./components/Carousel";
 import ServicesHorizontalScroll from "./components/ServicesHorizontalScroll";
 import Typewriter from "./components/Typewriter";
 import ScrollAnimation from "./components/ScrollAnimation";
+
 
 export default function Home() {
   const services = [
@@ -48,6 +50,24 @@ export default function Home() {
         "Dispute conflicting trademark applications.  File an opposition against any published trademark that conflicts with your rights or interests  before it is registered.",
       buttonText: "File Now",
     },
+    {
+      id: 5,
+      image: "/about4.jpg",
+      alt: "Patent Registration ",
+      title: "Patent Registration ",
+      description:
+        "Secure your innovation. Register your patent to protect new inventions and gain exclusive rights to your creative work",
+      buttonText: "File Now",
+    },
+    {
+      id: 6,
+      image: "/still-life-world-intellectual-property-day.jpg",
+      alt: "Industrial Design Registration",
+      title: "Industrial Design Registration",
+      description:
+        "Protect your product’s appearance. Register your industrial design to safeguard the unique visual features of your product.",
+      buttonText: "File Now",
+    },
   ];
   return (
     <main>
@@ -66,7 +86,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center mt-7 gap-3">
               <PrimaryButton>Check Availability</PrimaryButton>
-              <SecondaryButton>Fill an Application</SecondaryButton>
+              <SecondaryButton>File an Application</SecondaryButton>
             </div>
           </div>
         </ScrollAnimation>
@@ -93,20 +113,28 @@ export default function Home() {
                 className="text-2xl lg:text-2xl font-semibold text-black"
               />
             </div>
-            <p className="lg:w-3/6 mt-3 lg:text-right text-center lg:mt-0">
-              We are responsible for the registration and protection of
-              Trademarks, Patents, and Industrial Designs in Nigeria. Through our
-              intellectual property portal, individuals, businesses, and
-              innovators can file new applications, renew registrations, and
-              manage their IP rights from anywhere.
-            </p>
+            <div className="lg:w-3/6 mt-3 lg:text-left text-center lg:mt-0">
+              <p>
+                The Intellectual Property Office (IPO) Nigeria is an arm of the
+                Commercial Law Department of the Federal Ministry of Industry,
+                Trade and Investment, responsible for the registration and
+                protection of Trademarks, Patents, and Industrial Designs in
+                Nigeria. Through our intellectual property portal, individuals,
+                businesses, and innovators can file new applications, renew
+                registrations, and manage their IP rights from anywhere.
+              </p>
+              <p className="mt-3">
+                Our automated filing system is designed to make <span className="font-semibold">Trademark,
+                Patent, and Design registration</span> in Nigeria faster, simpler, and
+                fully digital.
+              </p>
+            </div>
           </div>
         </section>
       </ScrollAnimation>
 
       <ScrollAnimation delay={0.2}>
         <section className="my-20 mx-auto w-5/6">
-         
           <p className="text-2xl lg:text-4xl font-semibold mt-1 text-center">
             Explore the IPO Nigeria Portal
           </p>
@@ -114,11 +142,11 @@ export default function Home() {
             {/* services */}
             <ScrollAnimation delay={0.1} direction="scale">
               <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
-                <AiOutlineTrademark className="text-6xl mx-auto text-green-700" />
+                <PiTrademark className="text-6xl mx-auto text-green-700" />
                 <p className="text-xl mt-2 font-semibold">TradeMarks</p>
                 <p>
-                  Register a business name, logo, or slogan to prevent unauthorized
-                  use and build brand trust in Nigeria.
+                  Register a business name, logo, or slogan to prevent
+                  unauthorized use and build brand trust in Nigeria.
                 </p>
                 <PrimaryButton className="mt-5">File Application</PrimaryButton>
               </div>
@@ -126,13 +154,15 @@ export default function Home() {
 
             <ScrollAnimation delay={0.2} direction="scale">
               <div className="rounded-2xl text-center bg-green-800 text-white p-7 shadow-xl">
-                <SiInteractiondesignfoundation className="text-6xl mx-auto text-white" />
+                <Image src="/PatentIcon.svg" alt="Patent Icon" width={64} height={64} className="mx-auto text-white" />
                 <p className="text-xl mt-2 font-semibold">Patents</p>
                 <p>
-                  Protect your inventions with a patent giving you exclusive rights
-                  to your innovations in Nigeria.
+                  Protect your inventions with a patent giving you exclusive
+                  rights to your innovations in Nigeria.
                 </p>
-            <SecondaryButton className="mt-5">File Application</SecondaryButton>
+                <SecondaryButton className="mt-5">
+                  File Application
+                </SecondaryButton>
               </div>
             </ScrollAnimation>
 
@@ -153,10 +183,10 @@ export default function Home() {
 
       <ScrollAnimation delay={0.1}>
         <section className="my-20 mx-auto w-5/6">
-        <p className="text-green-700 text-center text-3xl lg:text-4xl font-bold">
-          Register and Get{" "}
-          <span className="text-black block">Approved in Record Time</span>
-        </p>
+          <p className="text-green-700 text-center text-3xl lg:text-4xl font-bold">
+            Register and Get{" "}
+            <span className="text-black block">Approved in Record Time</span>
+          </p>
 
           <ScrollAnimation delay={0.2}>
             <div className="mt-10">
