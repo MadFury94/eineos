@@ -23,6 +23,8 @@ import {
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import PrimaryButton from "./PrimaryButton";
+import ipologo from "../../public/IPOLogo.png";
+import coatofarms from "../../public/coa.png";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -33,25 +35,29 @@ const Header = () => {
   };
   return (
     <div className="">
-      
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
         <Link href="/" className="font-bold">
-          <div>
+          <div className="flex gap-1 items-center">
             <Image
-              src="/coa.png"
+              src={coatofarms}
               alt="Eineos Logo"
-              width={30}
-              height={10}
+              className="h-[32] w-[40]"
             />
+            <Image src={ipologo} alt="ipo Logo" className="h-[35] w-[35]" />
+            <div className="text-[8px]">
+              <p>
+                FEDERAL MINISTRY OF{" "}
+                <span className="block">INDUSTRY TRADE & INVESTMENT</span>
+              </p>
+              <p className="text-green-700">COMMERCIAL LAW DEPARTMENT</p>
+            </div>
           </div>
         </Link>
         <div className="hidden lg:flex gap-10">
           <Link
             href="/"
             className={
-              pathname === "/"
-                ? "text-black font-semibold"
-                : "text-gray-500"
+              pathname === "/" ? "text-black font-semibold" : "text-gray-500"
             }
           >
             Home
@@ -65,7 +71,8 @@ const Header = () => {
             }
           >
             About Us
-          </Link><Link
+          </Link>
+          <Link
             href="/services"
             className={
               pathname === "/services"
@@ -74,7 +81,20 @@ const Header = () => {
             }
           >
             Our Services
-          </Link><Link
+          </Link>
+
+          <Link
+            href="/faqs"
+            className={
+              pathname === "/faqs"
+                ? "text-black font-semibold"
+                : "text-gray-500"
+            }
+          >
+            FAQs
+          </Link>
+          
+          <Link
             href="/resources"
             className={
               pathname === "/resources"
@@ -94,23 +114,10 @@ const Header = () => {
           >
             Contact Us
           </Link>
-
-          <Link
-            href="/faqs"
-            className={
-              pathname === "/faqs"
-                ? "text-black font-semibold"
-                : "text-gray-500"
-            }
-          >
-            FAQs
-          </Link>
         </div>
 
         <div className="hidden lg:flex gap-8">
-          <PrimaryButton>
-            Login
-          </PrimaryButton>
+          <PrimaryButton>Login</PrimaryButton>
         </div>
 
         <div className="flex lg:hidden" onClick={handleMenu}>
@@ -177,9 +184,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div className="flex justify-center text-2xl gap-7 mt-24">
-                
-              </div>
+              <div className="flex justify-center text-2xl gap-7 mt-24"></div>
             </div>
           </div>
         )}
