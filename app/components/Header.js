@@ -93,7 +93,7 @@ const Header = () => {
           >
             FAQs
           </Link>
-          
+
           <Link
             href="/resources"
             className={
@@ -158,6 +158,14 @@ const Header = () => {
                     <MdOutlineWorkspaces /> Our Services
                   </p>
                 </Link>
+                <Link href="/faqs">
+                  <p
+                    className="flex gap-3 items-center"
+                    onClick={() => setOpen(false)}
+                  >
+                    <FaRegCircleQuestion /> FAQs
+                  </p>
+                </Link>
                 <Link href="/resources">
                   <p
                     className="flex gap-3 items-center"
@@ -174,14 +182,7 @@ const Header = () => {
                     <LuMessageSquareText /> Contact Us
                   </p>
                 </Link>
-                <Link href="/faqs">
-                  <p
-                    className="flex gap-3 items-center"
-                    onClick={() => setOpen(false)}
-                  >
-                    <FaRegCircleQuestion /> FAQs
-                  </p>
-                </Link>
+                
               </div>
 
               <div className="flex justify-center text-2xl gap-7 mt-24"></div>

@@ -10,6 +10,23 @@ const page = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  // Function to scroll to a specific section
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Navigation items for the tabs
+  const navigationTabs = [
+    { id: 'trademark', label: 'Trademark' },
+    { id: 'patent', label: 'Patent' },
+    { id: 'design', label: 'Design' },
+    { id: 'general-faq', label: 'General FAQ' },
+    { id: 'common-mistakes', label: 'Common Mistakes' }
+  ];
+
   const faqData = [
     {
       category: "TRADEMARK",
@@ -265,20 +282,42 @@ const page = () => {
           Register and manage Trademarks, Patents, and Industrial Designs with
           Nigeria's official Intellectual Property Office.
         </p>
+        
+        {/* Navigation Tabs */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          {navigationTabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => scrollToSection(tab.id)}
+              className="px-4 py-2 bg-white border-2 border-gray-200 rounded-full shadow-sm hover:bg-green-50 hover:border-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-200 text-sm font-medium text-gray-700 hover:text-green-700"
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </section>
 
       <section className="w-5/6 mx-auto my-10">
-        {faqData.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="mb-12 bg-gray-100 p-8 rounded-lg">
-            {/* Main Section Header */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                {section.category}
-              </h2>
-              {section.subtitle && (
-                <p className="text-gray-600 text-lg">{section.subtitle}</p>
-              )}
-            </div>
+        {faqData.map((section, sectionIndex) => {
+          // Generate section ID based on category
+          let sectionId = '';
+          if (section.category === 'TRADEMARK') sectionId = 'trademark';
+          else if (section.category === 'PATENT') sectionId = 'patent';
+          else if (section.category === 'DESIGN') sectionId = 'design';
+          else if (section.category === 'General Intellectual Property FAQs') sectionId = 'general-faq';
+          else if (section.category === 'COMMON MISTAKES BY ENTREPRENEURS AND SMALL BUSINESS OWNERS') sectionId = 'common-mistakes';
+          
+          return (
+            <div key={sectionIndex} id={sectionId} className="mb-12 bg-gray-100 p-8 rounded-lg">
+              {/* Main Section Header */}
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  {section.category}
+                </h2>
+                {section.subtitle && (
+                  <p className="text-gray-600 text-lg">{section.subtitle}</p>
+                )}
+              </div>
 
             {/* Check if it's a text-only section */}
             {section.isTextOnly ? (
@@ -351,7 +390,8 @@ const page = () => {
               ))
             )}
           </div>
-        ))}
+        );
+        })}
       </section>
     </main>
   );
