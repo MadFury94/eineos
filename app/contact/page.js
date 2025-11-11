@@ -16,14 +16,12 @@ import ScrollAnimation from "../components/ScrollAnimation";
 
 const page = () => {
   const [attachedFiles, setAttachedFiles] = useState([]);
+  const [selectedRegistry, setSelectedRegistry] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
 
   // Registry options array
-  const registryOptions = [
-    "Trademark Registry",
-    "Patent and Design Registry",
-    "Industrial Design Registry",
-    "Copyright Registry",
-  ];
+  const registryOptions = ["Trademark Registry", "Patent and Design Registry"];
 
   // Subject options array
   const subjectOptions = [
@@ -66,22 +64,84 @@ const page = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
+  // Handle registry selection change
+  const handleRegistryChange = (e) => {
+    setSelectedRegistry(e.target.value);
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const formData = new FormData(e.target);
+
+      // Add attached files to formData
+      attachedFiles.forEach((file, index) => {
+        formData.append(`attachment${index}`, file.file);
+      });
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus("success");
+        // Reset form
+        e.target.reset();
+        setAttachedFiles([]);
+        setSelectedRegistry("");
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main>
       <ReusableHerosection title="Contact Us" />
 
       <ScrollAnimation>
         <section className="bg-gray-100 w-5/6 my-5 py-10 mx-auto">
-          <div className="lg:flex justify-between mx-auto w-11/12">
-            <div className="">
+          <div className="lg:flex justify-between mx-auto w-11/12 gap-8">
+            <form onSubmit={handleSubmit} className="lg:w-1/2 w-full">
               <p className=" mb-5 font-bold text-2xl">
                 Get in Touch with{" "}
                 <span className="block text-green-700">IPO Nigeria</span>
               </p>
+
+              {/* Success/Error Messages */}
+              {submitStatus === "success" && (
+                <div className="mb-5 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+                  Form submitted successfully! We will get back to you soon.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="mb-5 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+                  Failed to submit form. Please try again later.
+                </div>
+              )}
+
               <select
                 className="bg-white px-3 py-2 w-full mb-5 rounded-md text-gray-400 outline-none"
                 name="registry"
-                defaultValue=""
+                value={selectedRegistry}
+                onChange={handleRegistryChange}
                 required
               >
                 <option value="" disabled>
@@ -93,11 +153,24 @@ const page = () => {
                   </option>
                 ))}
               </select>
+
+              {/* Show selected registry email */}
+              {selectedRegistry && (
+                <p className="mb-5 text-sm text-gray-600">
+                  Your message will be sent to:{" "}
+                  <span className="font-semibold text-green-700">
+                    {selectedRegistry === "Trademark Registry"
+                      ? "trademark@iponigeria.com"
+                      : "patent.design@iponigeria.com"}
+                  </span>
+                </p>
+              )}
+
               <div className="grid gap-5 grid-cols-2">
                 <input
                   className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
                   type="text"
-                  id="name"
+                  id="firstName"
                   placeholder="First Name"
                   name="firstName"
                   required
@@ -105,9 +178,9 @@ const page = () => {
                 <input
                   className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
                   type="text"
-                  id="name"
+                  id="lastName"
                   placeholder="Last Name"
-                  name="name"
+                  name="lastName"
                   required
                 />
               </div>
@@ -115,18 +188,18 @@ const page = () => {
               <div className="grid gap-5 grid-cols-2">
                 <input
                   className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
-                  type="text"
-                  id="name"
+                  type="email"
+                  id="email"
                   placeholder="Email Address"
                   name="email"
                   required
                 />
                 <input
                   className="bg-white px-3 py-2 w-full mb-5 rounded-md placeholder:text-gray-400 outline-none"
-                  type="text"
-                  id="name"
+                  type="tel"
+                  id="phone"
                   placeholder="Phone Number"
-                  name="name"
+                  name="phone"
                   required
                 />
               </div>
@@ -211,10 +284,17 @@ const page = () => {
                 )}
               </div>
 
-              <PrimaryButton className="w-full mt-5">Submit</PrimaryButton>
-            </div>
+              <PrimaryButton
+                type="submit"
+                className="w-full mt-5"
+                disabled={isSubmitting}
+                asLink={false}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </PrimaryButton>
+            </form>
 
-            <div className="bg-[#166534] mt-10 lg:mt-0 rounded-2xl text-white">
+            <div className="bg-[#166534] mt-10 lg:mt-0 lg:w-1/2 rounded-2xl text-white">
               <div className="w-5/6 mx-auto py-10">
                 <div>
                   <p className="text-xl font-semibold mb-2">Address</p>

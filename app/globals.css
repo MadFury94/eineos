@@ -128,3 +128,22 @@ body {
 .heading {
   @apply lg:text-5xl text-3xl text-green-700 font-bold text-center;
 }
+
+/* Custom dropdown option hover styles */
+select option {
+  background-color: white;
+  color: #374151;
+}
+
+/* Only apply green hover to selectable options (not disabled ones) */
+select option:not(:disabled):checked,
+select option:not(:disabled):hover {
+  background-color: #166534 !important;
+  color: white !important;
+}
+
+/* Keep disabled options with default styling */
+select option:disabled {
+  background-color: white;
+  color: #9ca3af;
+}
