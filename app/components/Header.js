@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   MdClose,
@@ -28,13 +28,30 @@ import coatofarms from "../../public/coa.png";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   const handleMenu = () => {
     setOpen(!open);
   };
+
+  // Handle scroll event to change header appearance
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+      }`}
+    >
       <div className="flex justify-between items-center w-5/6 mx-auto py-6">
         <Link href="/" className="font-bold">
           <div className="flex gap-1 items-center">
@@ -124,7 +141,7 @@ const Header = () => {
           <IoMenu className="text-2xl text-green-700 font-light cursor-pointer" />
         </div>
         {open && (
-          <div className="absolute bg-green-50 text-black top-0 left-0 w-full z-50 h-screen">
+          <div className="fixed bg-green-50 text-black top-0 left-0 w-full z-[60] h-screen">
             <div className="w-10/12 py-8 mx-auto">
               <div className="flex justify-between items-center">
                 <div className="flex gap-1 items-center">
@@ -133,7 +150,11 @@ const Header = () => {
                     alt="Eineos Logo"
                     className="h-[32] w-[40]"
                   />
-                  <Image src={ipologo} alt="ipo Logo" className="h-[35] w-[35]" />
+                  <Image
+                    src={ipologo}
+                    alt="ipo Logo"
+                    className="h-[35] w-[35]"
+                  />
                   <div className="text-[8px]">
                     <p>
                       FEDERAL MINISTRY OF{" "}
@@ -142,7 +163,7 @@ const Header = () => {
                     <p className="text-green-700">COMMERCIAL LAW DEPARTMENT</p>
                   </div>
                 </div>
-                
+
                 <div
                   onClick={handleMenu}
                   className="flex cursor-pointer justify-end text-2xl"
@@ -207,7 +228,7 @@ const Header = () => {
           </div>
         )}
       </div>
-    </div>
+    </header>
   );
 };
 
