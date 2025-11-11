@@ -71,15 +71,14 @@ const PublicNoticeModal = () => {
             <div className="p-8">
               <div className="mb-6">
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
-                  Public Notice: Update to the Trademark Act
+                  Public Notice: System Maintenance Update
                 </h2>
 
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  The general public and all stakeholders are hereby informed
-                  that the Trademark Act has been updated in accordance with
-                  recent legislative and regulatory provisions. Users are
-                  advised to review the updated Act to familiarize themselves
-                  with the new provisions and requirements.
+                  Our portal is currently undergoing maintenance, and you may
+                  experience difficulty logging in. We’re working to restore
+                  full functionality as quickly as possible. Thank you for your
+                  patience and understanding.
                 </p>
               </div>
 
