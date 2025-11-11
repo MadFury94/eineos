@@ -10,6 +10,7 @@ import Carousel from "./components/Carousel";
 import ServicesHorizontalScroll from "./components/ServicesHorizontalScroll";
 import Typewriter from "./components/Typewriter";
 import ScrollAnimation from "./components/ScrollAnimation";
+import PublicNoticeBanner from "./components/PublicNoticeBanner";
 
 export default function Home() {
   const services = [
@@ -70,6 +71,7 @@ export default function Home() {
   ];
   return (
     <main>
+      <PublicNoticeBanner />
       <section className="w-5/6 mx-auto mt-10 lg:mt-16">
         <ScrollAnimation>
           <div>

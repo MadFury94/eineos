@@ -36,7 +36,7 @@ const page = () => {
               </ul>
             </div>
             
-            <PrimaryButton href="/">
+            <PrimaryButton href="/resources">
               Back to Home
             </PrimaryButton>
           </div>
