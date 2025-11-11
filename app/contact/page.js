@@ -186,7 +186,7 @@ const page = () => {
               )}
             </div>
             
-            <PrimaryButton className="mt-5">Submit</PrimaryButton>
+            <PrimaryButton className="w-full mt-5">Submit</PrimaryButton>
           </div>
 
           <div className="bg-[#166534] mt-10 lg:mt-0 rounded-2xl text-white">

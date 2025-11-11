@@ -1,19 +1,22 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const PublicNoticeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     // Check if this is a page load (including refresh) vs navigation within the app
-    const isFirstLoad = !performance.getEntriesByType('navigation')[0] || 
-                       performance.getEntriesByType('navigation')[0].type === 'reload' ||
-                       performance.getEntriesByType('navigation')[0].type === 'navigate';
-    
+    const isFirstLoad =
+      !performance.getEntriesByType("navigation")[0] ||
+      performance.getEntriesByType("navigation")[0].type === "reload" ||
+      performance.getEntriesByType("navigation")[0].type === "navigate";
+
     // Only check session storage to prevent showing during same-session navigation
-    const hasSeenNoticeThisSession = sessionStorage.getItem('hasSeenPublicNotice');
-    
+    const hasSeenNoticeThisSession = sessionStorage.getItem(
+      "hasSeenPublicNotice"
+    );
+
     if (isFirstLoad && !hasSeenNoticeThisSession) {
       setIsOpen(true);
     }
@@ -22,7 +25,7 @@ const PublicNoticeModal = () => {
   const closeModal = () => {
     setIsOpen(false);
     // Mark that user has seen the notice for this session
-    sessionStorage.setItem('hasSeenPublicNotice', 'true');
+    sessionStorage.setItem("hasSeenPublicNotice", "true");
   };
 
   return (
@@ -49,17 +52,17 @@ const PublicNoticeModal = () => {
               className="absolute top-4 right-4 w-10 h-10 bg-green-100 hover:bg-green-200 rounded-full flex items-center justify-center transition-colors duration-200 z-10"
               aria-label="Close modal"
             >
-              <svg 
-                className="w-6 h-6 text-green-700" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-6 h-6 text-green-700"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M6 18L18 6M6 6l12 12" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
@@ -70,12 +73,13 @@ const PublicNoticeModal = () => {
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
                   Public Notice: Update to the Trademark Act
                 </h2>
-                
+
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  The general public and all stakeholders are hereby informed that the Trademark Act 
-                  has been updated in accordance with recent legislative and regulatory provisions. 
-                  Users are advised to review the updated Act to familiarize themselves with the new 
-                  provisions and requirements.
+                  The general public and all stakeholders are hereby informed
+                  that the Trademark Act has been updated in accordance with
+                  recent legislative and regulatory provisions. Users are
+                  advised to review the updated Act to familiarize themselves
+                  with the new provisions and requirements.
                 </p>
               </div>
 
@@ -87,7 +91,7 @@ const PublicNoticeModal = () => {
                 >
                   Click here to read the Updated Trademark Act
                 </a>
-                
+
                 <button
                   onClick={closeModal}
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"

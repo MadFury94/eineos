@@ -16,13 +16,13 @@ const page = () => {
       id: 2,
       title: "Ministry Publication/News",
       description: "Stay updated with the latest announcements, policy changes, and official communications from the Ministry regarding IP matters.",
-      image: "/still-life-world-intellectual-property-day.jpg"
+      image: "/services2.jpg"
     },
     {
       id: 3,
       title: "PDF and Video Guides on Portal Use",
       description: "Download detailed PDF manuals and watch instructional videos to master the IPO Nigeria portal for all your registration needs.",
-      image: "/vecteezy_judge-gavel-with-tablet-copyright-intellectual-property_4340249.jpg"
+      image: "/resource3.jpg"
     }
   ]
 

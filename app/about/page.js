@@ -93,7 +93,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 items-center mt-32 gap-20">
+        <div className="grid lg:grid-cols-2 items-center lg:mt-32 mt-20 gap-20">
           <div className="order-2 lg:order-1">
             <p className="text-2xl font-semibold">Patent & Design Registry</p>
             <p className="my-2">
