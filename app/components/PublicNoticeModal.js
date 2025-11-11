@@ -91,12 +91,12 @@ const PublicNoticeModal = () => {
                   Click here to read the Updated Trademark Act
                 </a>
 
-                <button
+                {/* <button
                   onClick={closeModal}
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-gray-400 hover:bg-gray-50 transition-all duration-200"
                 >
                   Close
-                </button>
+                </button> */}
               </div>
             </div>
           </motion.div>

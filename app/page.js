@@ -11,7 +11,6 @@ import ServicesHorizontalScroll from "./components/ServicesHorizontalScroll";
 import Typewriter from "./components/Typewriter";
 import ScrollAnimation from "./components/ScrollAnimation";
 
-
 export default function Home() {
   const services = [
     {
@@ -30,7 +29,7 @@ export default function Home() {
       title: "Publication Journal",
       description:
         "Stay updated on published applications.  Browse our official journal to view recently accepted Trademarks, Patents, and Designs.",
-      buttonText: "Register Now",
+      buttonText: "View Journal",
     },
     {
       id: 3,
@@ -57,7 +56,7 @@ export default function Home() {
       title: "Patent Registration ",
       description:
         "Secure your innovation. Register your patent to protect new inventions and gain exclusive rights to your creative work",
-      buttonText: "File Now",
+      buttonText: "Register Now",
     },
     {
       id: 6,
@@ -66,7 +65,7 @@ export default function Home() {
       title: "Industrial Design Registration",
       description:
         "Protect your product’s appearance. Register your industrial design to safeguard the unique visual features of your product.",
-      buttonText: "File Now",
+      buttonText: "Register Now",
     },
   ];
   return (
@@ -124,9 +123,11 @@ export default function Home() {
                 registrations, and manage their IP rights from anywhere.
               </p>
               <p className="mt-3">
-                Our automated filing system is designed to make <span className="font-semibold">Trademark,
-                Patent, and Design registration</span> in Nigeria faster, simpler, and
-                fully digital.
+                Our automated filing system is designed to make{" "}
+                <span className="font-semibold">
+                  Trademark, Patent, and Design registration
+                </span>{" "}
+                in Nigeria faster, simpler, and fully digital.
               </p>
             </div>
           </div>
@@ -154,7 +155,13 @@ export default function Home() {
 
             <ScrollAnimation delay={0.2} direction="scale">
               <div className="rounded-2xl text-center bg-green-800 text-white p-7 shadow-xl">
-                <Image src="/PatentIcon.svg" alt="Patent Icon" width={64} height={64} className="mx-auto text-white" />
+                <Image
+                  src="/PatentIcon.svg"
+                  alt="Patent Icon"
+                  width={64}
+                  height={64}
+                  className="mx-auto text-white"
+                />
                 <p className="text-xl mt-2 font-semibold">Patents</p>
                 <p>
                   Protect your inventions with a patent giving you exclusive
