@@ -9,6 +9,7 @@ import design from "../../public/design.jpg";
 import { motion } from "framer-motion";
 import servicehero from "../../public/servicehero.jpg";
 import ReusableHerosection from "../components/ReusableHerosection";
+import ScrollAnimation from "../components/ScrollAnimation";
 
 const page = () => {
   return (
@@ -16,22 +17,25 @@ const page = () => {
       
       <ReusableHerosection title="Our Services" />
 
-      <section className="mx-auto mt-10 w-5/6">
-        <div>
-          <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
-            Comprehensive Intellectual
-            <span className="text-black block">Property Service</span>
-          </p>
-          <p className="mt-2 text-center">
-            Register and manage Trademarks, Patents, and Industrial Designs{" "}
+      <ScrollAnimation>
+        <section className="mx-auto mt-10 w-5/6">
+          <div>
+            <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
+              Comprehensive Intellectual
+              <span className="text-black block">Property Service</span>
+            </p>
+            <p className="mt-2 text-center">
+              Register and manage Trademarks, Patents, and Industrial Designs{" "}
             <span className="lg:block">
               with Nigeria’s official Intellectual Property Office.
             </span>
           </p>
         </div>
       </section>
+      </ScrollAnimation>
 
-      <section className="mx-auto my-20 w-5/6">
+      <ScrollAnimation delay={0.2}>
+        <section className="mx-auto my-20 w-5/6">
         <div className="lg:flex gap-20 mb-20">
           <div className="lg:w-1/3">
             <p className="font-semibold text-2xl mb-3">Trademarks</p>
@@ -160,6 +164,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
     </main>
   );
 };

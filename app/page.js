@@ -8,6 +8,7 @@ import SecondaryButton from "./components/SecondaryButton";
 import Carousel from "./components/Carousel";
 import ServicesHorizontalScroll from "./components/ServicesHorizontalScroll";
 import Typewriter from "./components/Typewriter";
+import ScrollAnimation from "./components/ScrollAnimation";
 
 export default function Home() {
   const services = [
@@ -51,102 +52,120 @@ export default function Home() {
   return (
     <main>
       <section className="w-5/6 mx-auto mt-10 lg:mt-16">
-        <div>
-          <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
-            Protect Your Ideas{" "}
-            <span className="text-black block">Strengthen Your Business</span>
-          </p>
-          <p className="mt-2 text-center">
-            Register and manage Trademarks, Patents, and Industrial Designs{" "}
-            <span className="lg:block">
-              with Nigeria’s official Intellectual Property Office.
-            </span>
-          </p>
-          <div className="flex justify-center mt-7 gap-3">
-            <PrimaryButton>Check Availability</PrimaryButton>
-            <SecondaryButton>Fill an Application</SecondaryButton>
+        <ScrollAnimation>
+          <div>
+            <p className="lg:text-5xl text-3xl text-green-700 font-bold text-center">
+              Protect Your Ideas{" "}
+              <span className="text-black block">Strengthen Your Business</span>
+            </p>
+            <p className="mt-2 text-center">
+              Register and manage Trademarks, Patents, and Industrial Designs{" "}
+              <span className="lg:block">
+                with Nigeria's official Intellectual Property Office.
+              </span>
+            </p>
+            <div className="flex justify-center mt-7 gap-3">
+              <PrimaryButton>Check Availability</PrimaryButton>
+              <SecondaryButton>Fill an Application</SecondaryButton>
+            </div>
           </div>
-        </div>
-        <div className="mt-14">
-          <Carousel />
-        </div>
+        </ScrollAnimation>
+        <ScrollAnimation delay={0.2}>
+          <div className="mt-14">
+            <Carousel />
+          </div>
+        </ScrollAnimation>
       </section>
 
-      <section className="w-5/6 mx-auto my-20">
-        <div className="lg:flex justify-between">
-          <div className="text-center lg:text-left">
-            <p className="lg:text-5xl text-3xl text-green-600 font-semibold mb-2">
-              Our Mandate
+      <ScrollAnimation delay={0.1}>
+        <section className="w-5/6 mx-auto my-20">
+          <div className="lg:flex justify-between">
+            <div className="text-center lg:text-left">
+              <p className="lg:text-5xl text-3xl text-green-600 font-semibold mb-2">
+                Our Mandate
+              </p>
+              <Typewriter
+                text={[
+                  "To protect intellectual property rights in Nigeria",
+                  "To promote innovation, creativity, and fair competition",
+                  "To empower businesses.",
+                ]}
+                className="text-2xl lg:text-2xl font-semibold text-black"
+              />
+            </div>
+            <p className="lg:w-3/6 mt-3 lg:text-right text-center lg:mt-0">
+              We are responsible for the registration and protection of
+              Trademarks, Patents, and Industrial Designs in Nigeria. Through our
+              intellectual property portal, individuals, businesses, and
+              innovators can file new applications, renew registrations, and
+              manage their IP rights from anywhere.
             </p>
-            <Typewriter
-              text={[
-                "To protect intellectual property rights in Nigeria",
-                "To promote innovation, creativity, and fair competition",
-                "To empower businesses.",
-              ]}
-              className="text-2xl lg:text-2xl font-semibold text-black"
-            />
           </div>
-          <p className="lg:w-3/6 mt-3 lg:text-right text-center lg:mt-0">
-            We are responsible for the registration and protection of
-            Trademarks, Patents, and Industrial Designs in Nigeria. Through our
-            intellectual property portal, individuals, businesses, and
-            innovators can file new applications, renew registrations, and
-            manage their IP rights from anywhere.
+        </section>
+      </ScrollAnimation>
+
+      <ScrollAnimation delay={0.2}>
+        <section className="my-20 mx-auto w-5/6">
+         
+          <p className="text-2xl lg:text-4xl font-semibold mt-1 text-center">
+            Explore the IPO Nigeria Portal
           </p>
-        </div>
-      </section>
+          <div className="mt-10 grid lg:grid-cols-3 gap-5 grid-cols-1">
+            {/* services */}
+            <ScrollAnimation delay={0.1} direction="scale">
+              <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
+                <AiOutlineTrademark className="text-6xl mx-auto text-green-700" />
+                <p className="text-xl mt-2 font-semibold">TradeMarks</p>
+                <p>
+                  Register a business name, logo, or slogan to prevent unauthorized
+                  use and build brand trust in Nigeria.
+                </p>
+                <PrimaryButton className="mt-5">File Application</PrimaryButton>
+              </div>
+            </ScrollAnimation>
 
-      <section className="my-20 mx-auto w-5/6">
-       
-        <p className="text-2xl lg:text-4xl font-semibold mt-1 text-center">
-          Explore the IPO Nigeria Portal
-        </p>
-        <div className="mt-10 grid lg:grid-cols-3 gap-5 grid-cols-1">
-          {/* services */}
-          <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
-            <AiOutlineTrademark className="text-6xl mx-auto text-green-700" />
-            <p className="text-xl mt-2 font-semibold">TradeMarks</p>
-            <p>
-              Register a business name, logo, or slogan to prevent unauthorized
-              use and build brand trust in Nigeria.
-            </p>
-            <PrimaryButton className="mt-5">File Application</PrimaryButton>
-          </div>
-
-          <div className="rounded-2xl text-center bg-green-800 text-white p-7 shadow-xl">
-            <SiInteractiondesignfoundation className="text-6xl mx-auto text-white" />
-            <p className="text-xl mt-2 font-semibold">Patents</p>
-            <p>
-              Protect your inventions with a patent giving you exclusive rights
-              to your innovations in Nigeria.
-            </p>
+            <ScrollAnimation delay={0.2} direction="scale">
+              <div className="rounded-2xl text-center bg-green-800 text-white p-7 shadow-xl">
+                <SiInteractiondesignfoundation className="text-6xl mx-auto text-white" />
+                <p className="text-xl mt-2 font-semibold">Patents</p>
+                <p>
+                  Protect your inventions with a patent giving you exclusive rights
+                  to your innovations in Nigeria.
+                </p>
             <SecondaryButton className="mt-5">File Application</SecondaryButton>
-          </div>
+              </div>
+            </ScrollAnimation>
 
-          <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
-            <MdDesignServices className="text-6xl mx-auto text-green-700" />
-            <p className="text-xl mt-2 font-semibold">Industrial Designs</p>
-            <p>
-              Protect your product’s unique look with industrial design
-              registration in Nigeria.
-            </p>
-            <PrimaryButton className="mt-5">File Application</PrimaryButton>
+            <ScrollAnimation delay={0.3} direction="scale">
+              <div className="rounded-2xl text-center bg-green-50 p-7 shadow-xl">
+                <MdDesignServices className="text-6xl mx-auto text-green-700" />
+                <p className="text-xl mt-2 font-semibold">Industrial Designs</p>
+                <p>
+                  Protect your product's unique look with industrial design
+                  registration in Nigeria.
+                </p>
+                <PrimaryButton className="mt-5">File Application</PrimaryButton>
+              </div>
+            </ScrollAnimation>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
-      <section className="my-20 mx-auto w-5/6">
+      <ScrollAnimation delay={0.1}>
+        <section className="my-20 mx-auto w-5/6">
         <p className="text-green-700 text-center text-3xl lg:text-4xl font-bold">
           Register and Get{" "}
           <span className="text-black block">Approved in Record Time</span>
         </p>
 
-        <div className="mt-10">
-          {/* <ItemSlider services={services} /> */}
-          <ServicesHorizontalScroll services={services} />
-        </div>
-      </section>
+          <ScrollAnimation delay={0.2}>
+            <div className="mt-10">
+              {/* <ItemSlider services={services} /> */}
+              <ServicesHorizontalScroll services={services} />
+            </div>
+          </ScrollAnimation>
+        </section>
+      </ScrollAnimation>
     </main>
   );
 }

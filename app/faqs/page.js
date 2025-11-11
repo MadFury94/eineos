@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ReusableHerosection from "../components/ReusableHerosection";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import ScrollAnimation from "../components/ScrollAnimation";
 
 const page = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -276,26 +277,28 @@ const page = () => {
   return (
     <main>
       <ReusableHerosection title="FAQs" />
-      <section className="mt-10 w-5/6 mx-auto text-center">
-        <p className="text-3xl lg:text-5xl font-semibold">Frequently Asked <span className="text-green-700 block">Questions</span></p>
-        <p>
-          Register and manage Trademarks, Patents, and Industrial Designs with
-          Nigeria's official Intellectual Property Office.
-        </p>
-        
-        {/* Navigation Tabs */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          {navigationTabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => scrollToSection(tab.id)}
-              className="px-4 py-2 bg-white border-2 border-gray-200 rounded-full shadow-sm hover:bg-green-50 hover:border-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-200 text-sm font-medium text-gray-700 hover:text-green-700"
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-      </section>
+      <ScrollAnimation>
+        <section className="mt-10 w-5/6 mx-auto text-center">
+          <p className="text-3xl lg:text-5xl font-semibold">Frequently Asked <span className="text-green-700 block">Questions</span></p>
+          <p>
+            Register and manage Trademarks, Patents, and Industrial Designs with
+            Nigeria's official Intellectual Property Office.
+          </p>
+          
+          {/* Navigation Tabs */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            {navigationTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => scrollToSection(tab.id)}
+                className="px-4 py-2 bg-white border-2 border-gray-200 rounded-full shadow-sm hover:bg-green-50 hover:border-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-200 text-sm font-medium text-gray-700 hover:text-green-700"
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </section>
+      </ScrollAnimation>
 
       <section className="w-5/6 mx-auto my-10">
         {faqData.map((section, sectionIndex) => {
@@ -308,7 +311,8 @@ const page = () => {
           else if (section.category === 'COMMON MISTAKES BY ENTREPRENEURS AND SMALL BUSINESS OWNERS') sectionId = 'common-mistakes';
           
           return (
-            <div key={sectionIndex} id={sectionId} className="mb-12 bg-gray-100 p-8 rounded-lg">
+            <ScrollAnimation key={sectionIndex} delay={sectionIndex * 0.1}>
+              <div id={sectionId} className="mb-12 bg-gray-100 p-8 rounded-lg">
               {/* Main Section Header */}
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -390,6 +394,7 @@ const page = () => {
               ))
             )}
           </div>
+            </ScrollAnimation>
         );
         })}
       </section>

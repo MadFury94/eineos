@@ -6,6 +6,7 @@ import contacthero from "../../public/contactHero.jpg";
 import PrimaryButton from "@/app/components/PrimaryButton";
 import ReusableHerosection from "../components/ReusableHerosection";
 import { MdAttachFile, MdClose } from "react-icons/md";
+import ScrollAnimation from "../components/ScrollAnimation";
 
 const page = () => {
   const [attachedFiles, setAttachedFiles] = useState([]);
@@ -63,7 +64,8 @@ const page = () => {
     <main>
       <ReusableHerosection title="Contact Us" />
 
-      <section className="bg-gray-100 w-5/6 my-5 py-10 mx-auto">
+      <ScrollAnimation>
+        <section className="bg-gray-100 w-5/6 my-5 py-10 mx-auto">
         <div className="lg:flex justify-between mx-auto w-11/12">
           <div className="">
             <p className=" mb-5 font-bold text-2xl">Get in Touch with <span className="block text-green-700">IPO Nigeria</span></p>
@@ -218,6 +220,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
     </main>
   );
 };
