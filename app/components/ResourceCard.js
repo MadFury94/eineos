@@ -16,8 +16,8 @@ const ResourceCard = ({ resource }) => {
             className="object-cover object-center hover:scale-105 transition-transform duration-300"
           />
           {/* Play Button Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-            <div className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all duration-200">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all duration-200 shadow-lg">
               <FaPlay className="text-green-600 text-xl ml-1" />
             </div>
           </div>
