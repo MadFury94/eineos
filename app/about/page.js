@@ -94,7 +94,7 @@ const page = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 items-center mt-32 gap-20">
-          <div className="">
+          <div className="order-2 lg:order-1">
             <p className="text-2xl font-semibold">Patent & Design Registry</p>
             <p className="my-2">
               The Patent and Design Registry, under the Commercial Law
@@ -136,7 +136,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="">
+          <div className="order-1 lg:order-2">
             {/* Background/Base Image */}
             <Image
               src={about2}
