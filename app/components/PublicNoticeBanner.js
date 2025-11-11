@@ -46,7 +46,7 @@ const PublicNoticeBanner = () => {
                 <motion.div
                   animate={{ x: ["100%", "-100%"] }}
                   transition={{
-                    duration: 50,
+                    duration: 15,
                     repeat: Infinity,
                     ease: "linear"
                   }}
@@ -61,7 +61,7 @@ const PublicNoticeBanner = () => {
               {/* Close button */}
               <button
                 onClick={closeBanner}
-                className="w-7 h-7 md:w-8 md:h-8 bg-green-600 hover:bg-green-800 rounded-full flex items-center justify-center transition-colors duration-200 shrink-0"
+                className="w-7 h-7 md:w-8 md:h-8 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center transition-colors duration-200 shrink-0"
                 aria-label="Close banner"
               >
                 <svg
@@ -84,7 +84,7 @@ const PublicNoticeBanner = () => {
             <div className="flex justify-center">
               <a
                 href="#"
-                className="bg-white text-green-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
+                className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
                 onClick={closeBanner}
               >
                 Click here to read the Updated Trademark Act
