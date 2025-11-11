@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import contact1 from '../../public/carousel1.jpg'
 import contact2 from '../../public/carousel2.jpg'
 import contact3 from '../../public/carousel3.jpg'
-import contact4 from '../../public/carousel5.png'
+import contact4 from '../../public/caurosel6.png'
 
 const Carousel = () => {
   const images = [contact4, contact1, contact2, contact3, ];

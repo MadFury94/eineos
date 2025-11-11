@@ -124,13 +124,31 @@ const Header = () => {
           <IoMenu className="text-2xl text-green-700 font-light cursor-pointer" />
         </div>
         {open && (
-          <div className="absolute bg-[#166534] text-white top-0 left-0 w-full z-50 h-screen">
+          <div className="absolute bg-green-50 text-black top-0 left-0 w-full z-50 h-screen">
             <div className="w-10/12 py-8 mx-auto">
-              <div
-                onClick={handleMenu}
-                className="flex cursor-pointer justify-end text-2xl"
-              >
-                <MdClose />
+              <div className="flex justify-between items-center">
+                <div className="flex gap-1 items-center">
+                  <Image
+                    src={coatofarms}
+                    alt="Eineos Logo"
+                    className="h-[32] w-[40]"
+                  />
+                  <Image src={ipologo} alt="ipo Logo" className="h-[35] w-[35]" />
+                  <div className="text-[8px]">
+                    <p>
+                      FEDERAL MINISTRY OF{" "}
+                      <span className="block">INDUSTRY TRADE & INVESTMENT</span>
+                    </p>
+                    <p className="text-green-700">COMMERCIAL LAW DEPARTMENT</p>
+                  </div>
+                </div>
+                
+                <div
+                  onClick={handleMenu}
+                  className="flex cursor-pointer justify-end text-2xl"
+                >
+                  <MdClose />
+                </div>
               </div>
 
               <div className="text-2xl flex flex-col gap-6 mt-12">
@@ -182,7 +200,6 @@ const Header = () => {
                     <LuMessageSquareText /> Contact Us
                   </p>
                 </Link>
-                
               </div>
 
               <div className="flex justify-center text-2xl gap-7 mt-24"></div>
