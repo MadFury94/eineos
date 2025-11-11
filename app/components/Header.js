@@ -89,9 +89,9 @@ const Header = () => {
           </Link>
 
           <Link
-            href="/faq"
+            href="/faqs"
             className={
-              pathname === "/faq"
+              pathname === "/faqs"
                 ? "text-black font-semibold"
                 : "text-gray-500"
             }
