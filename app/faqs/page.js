@@ -277,7 +277,7 @@ const page = () => {
     <main>
       <ReusableHerosection title="FAQs" />
       <section className="mt-10 w-5/6 mx-auto text-center">
-        <p className="text-3xl font-semibold">Frequently Asked Questions</p>
+        <p className="text-3xl lg:text-5xl font-semibold">Frequently Asked <span className="text-green-700 block">Questions</span></p>
         <p>
           Register and manage Trademarks, Patents, and Industrial Designs with
           Nigeria's official Intellectual Property Office.
