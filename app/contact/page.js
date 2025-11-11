@@ -331,7 +331,7 @@ const page = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <IoCallOutline className="h-5 w-5 shrink-0" />
-                      <p>09163570744</p>
+                      <p>+2349163570744</p>
                     </div>
                   </div>
                 </div>
@@ -340,7 +340,7 @@ const page = () => {
                   <p className="text-xl font-semibold mb-2">Open time</p>
                   <div className="flex items-start gap-3">
                     <MdAccessTime className="h-6 w-6 shrink-0 mt-1" />
-                    <p>Monday - Friday: 9:00am - 5:00pm</p>
+                    <p>Monday - Friday: 9:00am - 4:00pm</p>
                   </div>
                 </div>
               </div>
@@ -354,7 +354,7 @@ const page = () => {
                 For technical support, please submit a support ticket
                 (hyperlink) through our portal. You may also contact us via
                 phone or WhatsApp for urgent assistance:{" "}
-                <span className="text-green-700">09038979681</span>
+                <span className="text-green-700">+2349038979681</span>
               </p>
             </div>
           </div>
