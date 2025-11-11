@@ -140,6 +140,111 @@ const page = () => {
           ]
         }
       ]
+    },
+    {
+      category: "PATENT",
+      subtitle: "Understanding Patent in Nigeria",
+      sections: [
+        {
+          sectionTitle: "",
+          questions: [
+            {
+              question: "What is a Patent?",
+              answer: "A patent is an exclusive right granted by the government to an inventor for a new, useful, and non-obvious invention. In Nigeria, patents provide protection for inventions, giving the patent holder the exclusive right to make, use, sell, or import the patented invention for a specified period, typically 20 years from the filing date."
+            },
+            {
+              question: "Why register a patent?",
+              answer: "Registering a patent provides legal protection for your invention, prevents others from making, using, or selling your invention without permission, allows you to license or sell your patent rights, enhances your business value and competitive advantage, and provides legal remedies against infringement."
+            },
+            {
+              question: "How long does a patent registration last?",
+              answer: "In Nigeria, utility patents are valid for 20 years from the filing date, provided annual maintenance fees are paid. After expiry, the invention enters the public domain and can be freely used by anyone."
+            }
+          ]
+        },
+        {
+          sectionTitle: "How to Register a Patent in Nigeria",
+          questions: [
+            {
+              question: "How do I register a patent in Nigeria?",
+              answer: "To register a patent in Nigeria: 1) Ensure your invention is new, useful, and non-obvious, 2) Conduct a patent search, 3) Prepare detailed patent application with specifications and claims, 4) File application with the Nigerian Patents and Designs Registry, 5) Pay required fees, 6) Undergo examination process, 7) Respond to office actions if any, 8) Patent granted if all requirements are met."
+            },
+            {
+              question: "How can I make payment?",
+              answer: "Patent application fees in Nigeria can be paid through various methods including bank transfers, online payments through the registry portal, bank drafts payable to the Nigerian Patents and Designs Registry, or cash payments at designated registry offices. All payments should include proper reference numbers for tracking."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      category: "DESIGN",
+      subtitle: "Understanding Industrial Designs",
+      sections: [
+        {
+          sectionTitle: "",
+          questions: [
+            {
+              question: "What is a design?",
+              answer: "An Industrial Design refers to the ornamental or aesthetic aspect of an article. It may consist of three-dimensional features, such as the shape or surface of an article, or two-dimensional features, such as patterns, lines, or color. Industrial designs protect the visual design of objects that are not purely utilitarian."
+            },
+            {
+              question: "Why register a design?",
+              answer: "Registering an industrial design provides exclusive rights to use, manufacture, and sell products with that design. It prevents others from copying your design's appearance, enhances commercial value, provides legal protection against infringement, and can be licensed or sold as a business asset."
+            }
+          ]
+        },
+        {
+          sectionTitle: "How to Register a Design in Nigeria",
+          questions: [
+            {
+              question: "How do I register a design in Nigeria?",
+              answer: "To register an Industrial Design in Nigeria: 1) Ensure your design is new and has individual character, 2) Prepare clear representations of your design from multiple angles, 3) File application with the Nigerian Patents and Designs Registry, 4) Pay required fees, 5) Undergo examination, 6) Design registered if requirements are met. Protection lasts for 5 years and can be renewed."
+            },
+            {
+              question: "How can I make payment?",
+              answer: "Industrial design application fees in Nigeria can be paid through various methods including bank transfers, online payments through the Nigerian Patents and Designs Registry portal, bank drafts payable to the registry, or cash payments at designated registry offices. All payments should include proper reference numbers for tracking."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      category: "General Intellectual Property FAQs",
+      subtitle: "",
+      sections: [
+        {
+          sectionTitle: "",
+          questions: [
+            {
+              question: "What are the general requirements for IP registration?",
+              answer: "General requirements for intellectual property registration in Nigeria include: submitting proper application forms, paying prescribed fees, providing accurate representations or descriptions, meeting specific criteria for each IP type (novelty for patents, distinctiveness for trademarks, individual character for designs), and complying with formal requirements set by the respective registries."
+            },
+            {
+              question: "How long do IP registrations typically take?",
+              answer: "IP registration timelines in Nigeria vary: Trademarks typically take 12-18 months, Patents take 2-4 years depending on complexity, and Industrial Designs usually take 6-12 months. Processing times may be longer if there are objections, oppositions, or if additional documentation is required."
+            },
+            {
+              question: "Can I check the status of my IP application?",
+              answer: "Yes, you can check the status of your intellectual property applications through the respective registry portals online. The Nigerian Trademark Registry and Patents & Designs Registry provide online tracking systems where you can monitor your application progress using your application number and other reference details."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      category: "COMMON MISTAKES BY ENTREPRENEURS AND SMALL BUSINESS OWNERS",
+      subtitle: "",
+      isTextOnly: true,
+      content: {
+        title: "Avoid these common pitfalls:",
+        points: [
+          "1. Delaying registration until competitors copy your brand.",
+          "2. Assuming a CAC registration gives trademark, Patent, or Design protection; it does not.",
+          "3. Forgetting to renew after 7 or 14 years.",
+          "4. Using marks that resemble established brands, leading to legal disputes."
+        ]
+      }
     }
   ];
 
@@ -167,54 +272,66 @@ const page = () => {
               )}
             </div>
 
-            {/* Sub-sections */}
-            {section.sections?.map((subsection, subsectionIndex) => (
-              <div key={subsectionIndex} className="mb-8">
-                {subsection.sectionTitle && (
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                    {subsection.sectionTitle}
-                  </h3>
-                )}
-                
-                <div className="space-y-4">
-                  {subsection.questions.map((faq, faqIndex) => {
-                    const globalIndex = `${sectionIndex}-${subsectionIndex}-${faqIndex}`;
-                    const isOpen = openFAQ === globalIndex;
-                    
-                    return (
-                      <div
-                        key={faqIndex}
-                        className="bg-white rounded-lg shadow-sm border border-gray-200"
-                      >
-                        {/* Question */}
-                        <button
-                          onClick={() => toggleFAQ(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                        >
-                          <span className="text-gray-700 font-medium">
-                            {faq.question}
-                          </span>
-                          <MdKeyboardArrowDown
-                            className={`text-gray-500 text-xl transition-transform duration-200 ${
-                              isOpen ? "rotate-180" : ""
-                            }`}
-                          />
-                        </button>
-
-                        {/* Answer */}
-                        {isOpen && (
-                          <div className="px-6 pb-4">
-                            <p className="text-gray-600 leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
+            {/* Check if it's a text-only section */}
+            {section.isTextOnly ? (
+              <div className="bg-white rounded-lg p-6 border border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{section.content.title}</h3>
+                <div className="space-y-2">
+                  {section.content.points.map((point, pointIndex) => (
+                    <p key={pointIndex} className="text-gray-700">{point}</p>
+                  ))}
                 </div>
               </div>
-            ))}
+            ) : (
+              /* Regular accordion sections */
+              section.sections?.map((subsection, subsectionIndex) => (
+                <div key={subsectionIndex} className="mb-8">
+                  {subsection.sectionTitle && (
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                      {subsection.sectionTitle}
+                    </h3>
+                  )}
+                  
+                  <div className="space-y-4">
+                    {subsection.questions.map((faq, faqIndex) => {
+                      const globalIndex = `${sectionIndex}-${subsectionIndex}-${faqIndex}`;
+                      const isOpen = openFAQ === globalIndex;
+                      
+                      return (
+                        <div
+                          key={faqIndex}
+                          className="bg-white rounded-lg shadow-sm border border-gray-200"
+                        >
+                          {/* Question */}
+                          <button
+                            onClick={() => toggleFAQ(globalIndex)}
+                            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                          >
+                            <span className="text-gray-700 font-medium">
+                              {faq.question}
+                            </span>
+                            <MdKeyboardArrowDown
+                              className={`text-gray-500 text-xl transition-transform duration-200 ${
+                                isOpen ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+
+                          {/* Answer */}
+                          {isOpen && (
+                            <div className="px-6 pb-4">
+                              <p className="text-gray-600 leading-relaxed">
+                                {faq.answer}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         ))}
       </section>
