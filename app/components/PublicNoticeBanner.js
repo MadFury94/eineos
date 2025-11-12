@@ -75,7 +75,7 @@ const PublicNoticeBanner = () => {
               </motion.div>
             </div>
 
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <a
                 href="#"
                 className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
@@ -83,7 +83,7 @@ const PublicNoticeBanner = () => {
               >
                 Click here to read the Updated Trademark Act
               </a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       )}
