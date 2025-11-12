@@ -36,8 +36,8 @@ const page = () => {
         <section className="mx-auto w-5/6">
           <div className="text-center mt-10 mb-12">
             <p className="lg:text-5xl text-green-700 text-3xl font-bold">
-              All the resources you need
-              <span className="block text-black"> in one place</span>
+              All The Resources You Need
+              <span className="block text-black"> in One Place</span>
             </p>
             {/* <p className='lg:w-4/6 mx-auto mt-4'>Watch step-by-step video guides on how to register, renew, and manage your Trademarks, Patents, and Industrial Designs through the IPO Nigeria online portal.</p> */}
           </div>
