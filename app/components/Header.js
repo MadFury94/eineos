@@ -58,10 +58,10 @@ const Header = () => {
             <Image
               src={coatofarms}
               alt="Eineos Logo"
-              className="h-[32] w-[40]"
+              className="h-[43] w-[55]"
             />
-            <Image src={ipologo} alt="ipo Logo" className="h-[35] w-[35]" />
-            <div className="text-[8px]">
+            <Image src={ipologo} alt="ipo Logo" className="h-[45] w-[45]" />
+            <div className="text-[10px]">
               <p>
                 FEDERAL MINISTRY OF{" "}
                 <span className="block">INDUSTRY TRADE & INVESTMENT</span>

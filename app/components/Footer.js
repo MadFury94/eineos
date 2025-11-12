@@ -16,8 +16,8 @@ const Footer = () => {
             <div className="lg:flex gap-10">
               <div className="lg:w-2/6">
                 <p className="font-semibold text-lg">
-                  Federal Ministry of Industry, Trade & Investment Commercial
-                  Law Department
+                  Federal Ministry of Industry, Trade & Investment <span className="block">Commercial
+                  Law Department</span>
                 </p>
                 <div className="mt-5 flex items-start gap-2">
                   <div className="flex justify-center items-center h-10 w-10 bg-white rounded-full flex-shrink-0">
