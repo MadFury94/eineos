@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "IPO Nigeria - Intellectual Property Office Nigeria | Trademarks, Patents & Industrial Designs",
   description: "Official digital platform for Nigeria's Intellectual Property Office. Register and manage trademarks, patents, and industrial designs online. Protect your innovations with Nigeria's trusted IP registration system under the Federal Ministry of Industry, Trade and Investment.",
+  icons: {
+    icon: '/IPOLogo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
