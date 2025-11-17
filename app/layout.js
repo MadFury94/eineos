@@ -19,7 +19,34 @@ export const metadata = {
   title: "IPO Nigeria - Intellectual Property Office Nigeria | Trademarks, Patents & Industrial Designs",
   description: "Official digital platform for Nigeria's Intellectual Property Office. Register and manage trademarks, patents, and industrial designs online. Protect your innovations with Nigeria's trusted IP registration system under the Federal Ministry of Industry, Trade and Investment.",
   icons: {
-    icon: '/IPOLogo.png',
+    icon: [
+      { url: '/IPOLogo.png' },
+      { url: '/IPOLogo.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/IPOLogo.png',
+    apple: '/IPOLogo.png',
+  },
+  openGraph: {
+    title: "IPO Nigeria - Official Intellectual Property Office",
+    description: "Register and manage trademarks, patents, and industrial designs with Nigeria's official IP office under the Federal Ministry of Industry, Trade & Investment.",
+    url: 'https://your-domain.com',
+    siteName: 'IPO Nigeria - Commercial Law Department',
+    images: [
+      {
+        url: '/IPOLogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'IPO Nigeria - Federal Ministry of Industry Trade & Investment',
+      },
+    ],
+    locale: 'en_NG',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "IPO Nigeria - Official Intellectual Property Office",
+    description: "Register and manage trademarks, patents, and industrial designs with Nigeria's official IP office.",
+    images: ['/IPOLogo.png'],
   },
 };
 
