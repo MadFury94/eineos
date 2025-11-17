@@ -20,11 +20,11 @@ export const metadata = {
   description: "Official digital platform for Nigeria's Intellectual Property Office. Register and manage trademarks, patents, and industrial designs online. Protect your innovations with Nigeria's trusted IP registration system under the Federal Ministry of Industry, Trade and Investment.",
   icons: {
     icon: [
-      { url: '/IPOLogo.png' },
-      { url: '/IPOLogo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/IPOLogo.png?v=1' },
+      { url: '/IPOLogo.png?v=1', sizes: '32x32', type: 'image/png' },
     ],
-    shortcut: '/IPOLogo.png',
-    apple: '/IPOLogo.png',
+    shortcut: '/IPOLogo.png?v=1',
+    apple: '/IPOLogo.png?v=1',
   },
   openGraph: {
     title: "IPO Nigeria - Official Intellectual Property Office",
